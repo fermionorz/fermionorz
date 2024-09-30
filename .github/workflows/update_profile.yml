@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 删除旧的 profile
-        run: ls | grep -v "wiki\|cyber_chef\|osint\|profile" | xargs -i rm -rf {}
+        run: ls | grep -v "wiki\|cyber_chef\|osint\|profile\|blog" | xargs -i rm -rf {}
 
       - name: copy 新的 profile
         run: cp -r profile/* .
