@@ -1,0 +1,22 @@
+name: ci 
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出分支
+        uses: actions/checkout@v4
+
+      - name: 删除旧的 profile
+        run: ls | grep -v "wiki\|cyber_chef\|osint\|profile" | xargs -i rm -rf {}
+
+      - name: copy 新的 profile
+        run: cp -r profile/* .
+
+      - name: 提交请求
+        uses: ad-m/github-push-action@master
