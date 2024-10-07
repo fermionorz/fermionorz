@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="https://avatars.githubusercontent.com/u/112745175?size=32">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
@@ -268,12 +268,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../%E7%8E%84%E5%AD%A6/" class="md-tabs__link">
+        <a href="../../../%E6%B8%B8%E6%88%8F/" class="md-tabs__link">
           
   
     
   
-  玄学
+  游戏
 
         </a>
       </li>
@@ -288,12 +288,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../%E7%94%9F%E6%B4%BB/" class="md-tabs__link">
+        <a href="../../../%E7%8E%84%E5%AD%A6/" class="md-tabs__link">
           
   
     
   
-  生活
+  玄学
 
         </a>
       </li>
@@ -762,7 +762,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 02 - 恶意软件开发简介
+    🟢 模块 02 - MalDev 简介
   </span>
   
 
@@ -783,7 +783,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 03 - 必备工具
+    🟢 模块 03 - 必要工具
   </span>
   
 
@@ -951,6 +951,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dll" class="md-nav__link">
     <span class="md-ellipsis">
       什么是 DLL？
@@ -962,7 +971,16 @@
         <li class="md-nav__item">
   <a href="#dll_1" class="md-nav__link">
     <span class="md-ellipsis">
-      系统范围 DLL 基地址
+      系统范围的 DLL 基地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dlls" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么使用 DLLs？
     </span>
   </a>
   
@@ -971,16 +989,7 @@
         <li class="md-nav__item">
   <a href="#dll_2" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 DLL 的原因
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visual-studio-dll" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 Visual Studio 中创建 DLL 文件
+      DLL 入口点
     </span>
   </a>
   
@@ -989,16 +998,7 @@
         <li class="md-nav__item">
   <a href="#dll_3" class="md-nav__link">
     <span class="md-ellipsis">
-      DLL 入口点
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      导出函数
+      示例 DLL 代码
     </span>
   </a>
   
@@ -1007,61 +1007,76 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      导出函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       动态链接
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="动态链接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dll_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      加载 DLL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dll_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      检索 DLL 的句柄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      检索函数的地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-dll" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      步骤 1 - 加载 DLL
+      动态链接示例
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-dll" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      第 2 步 - 检索 DLL 的句柄
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 3 - 获取函数地址
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-" class="md-nav__link">
-    <span class="md-ellipsis">
-      第4步 - 进行函数地址类型转换
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-helloworld" class="md-nav__link">
-    <span class="md-ellipsis">
-      集成 - 调用 HelloWorld
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-messageboxa" class="md-nav__link">
-    <span class="md-ellipsis">
-      动态链接示例 - MessageBoxA
+      函数指针
     </span>
   </a>
   
@@ -1077,18 +1092,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#visual-studio-dll" class="md-nav__link">
     <span class="md-ellipsis">
-      删除预编译头文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
+      使用 Visual Studio 创建 DLL 文件
     </span>
   </a>
   
@@ -1156,7 +1162,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 12 - 未记录的结构
+    🟢 模块 12 - 未记录的结构体
   </span>
   
 
@@ -2224,11 +2230,11 @@
         
   
   
-    <a href="../../../%E7%8E%84%E5%AD%A6/" class="md-nav__link">
+    <a href="../../../%E6%B8%B8%E6%88%8F/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    玄学
+    游戏
   </span>
   
 
@@ -2256,6 +2262,8 @@
           
         
       
+        
+      
     
     
       
@@ -2272,11 +2280,11 @@
         
   
   
-    <a href="../../../%E7%94%9F%E6%B4%BB/" class="md-nav__link">
+    <a href="../../../%E7%8E%84%E5%AD%A6/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    生活
+    玄学
   </span>
   
 
@@ -2518,6 +2526,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dll" class="md-nav__link">
     <span class="md-ellipsis">
       什么是 DLL？
@@ -2529,7 +2546,16 @@
         <li class="md-nav__item">
   <a href="#dll_1" class="md-nav__link">
     <span class="md-ellipsis">
-      系统范围 DLL 基地址
+      系统范围的 DLL 基地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dlls" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么使用 DLLs？
     </span>
   </a>
   
@@ -2538,16 +2564,7 @@
         <li class="md-nav__item">
   <a href="#dll_2" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 DLL 的原因
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visual-studio-dll" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 Visual Studio 中创建 DLL 文件
+      DLL 入口点
     </span>
   </a>
   
@@ -2556,16 +2573,7 @@
         <li class="md-nav__item">
   <a href="#dll_3" class="md-nav__link">
     <span class="md-ellipsis">
-      DLL 入口点
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      导出函数
+      示例 DLL 代码
     </span>
   </a>
   
@@ -2574,61 +2582,76 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      导出函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       动态链接
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="动态链接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dll_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      加载 DLL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dll_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      检索 DLL 的句柄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      检索函数的地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-dll" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      步骤 1 - 加载 DLL
+      动态链接示例
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-dll" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      第 2 步 - 检索 DLL 的句柄
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 3 - 获取函数地址
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-" class="md-nav__link">
-    <span class="md-ellipsis">
-      第4步 - 进行函数地址类型转换
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-helloworld" class="md-nav__link">
-    <span class="md-ellipsis">
-      集成 - 调用 HelloWorld
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-messageboxa" class="md-nav__link">
-    <span class="md-ellipsis">
-      动态链接示例 - MessageBoxA
+      函数指针
     </span>
   </a>
   
@@ -2644,18 +2667,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#visual-studio-dll" class="md-nav__link">
     <span class="md-ellipsis">
-      删除预编译头文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
+      使用 Visual Studio 创建 DLL 文件
     </span>
   </a>
   
@@ -2677,160 +2691,107 @@
 
 
 <h1 id="09-"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 09 - 动态链接库</h1>
-<p><code>.exe</code> 和 <code>.dll</code> 两种文件类型都属于便携式可执行格式，但两者之间存在差异。例如，一个可以通过立即注意到的主要区别是，<code>.exe</code> 文件可以通过双击执行，而 <code>.dll</code> 文件则不能。本模块将概述两种文件类型之间的其他差异。</p>
-<h3 id="dll">什么是 DLL？</h3>
-<p>DLL 是可执行函数或数据的共享库，可被多个应用程序同时使用。它们用于导出供进程使用的函数。与 EXE 文件不同，DLL 文件不能单独执行代码。相反，DLL 库需要被其他程序调用才能执行代码。如前所述，<code>CreateFileW</code> 从 <code>kernel32.dll</code> 导出，因此如果进程想要调用该函数，它首先需要将 <code>kernel32.dll</code> 加载到其地址空间中。</p>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 审查 DLL 的 4 个入口点</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 阅读关于 LoadLibrary、GetModuleHandle 和 GetProcAddress 的文档</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 创建一个导出函数的 DLL</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 Rundll32.exe 调用该函数</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 创建一个加载 DLL 的 EXE 程序。使用 Process Hacker 验证 DLL 是否已加载。</li>
+</ul>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p><code>.exe</code> 和 <code>.dll</code> 文件类型都被视为可移植可执行格式，但两者之间存在差异。此模块解释了这两种文件类型之间的差异。</p>
+<h2 id="dll">什么是 DLL？</h2>
+<p>DLL 是可由多个应用程序同时使用的可执行函数或数据的共享库。它们用于导出供进程使用的函数。与 EXE 文件不同，DLL 文件无法单独执行代码。相反，DLL 库需要由其他程序调用以执行代码。如前所述， <code>CreateFileW</code> 是从 <code>kernel32.dll</code> 导出的，因此如果一个进程想要调用该函数，它必须首先将 <code>kernel32.dll</code> 加载到其地址空间中。</p>
 <p>默认情况下，某些 DLL 会自动加载到每个进程中，因为这些 DLL 导出了进程正确执行所需的函数。这些 DLL 的几个示例包括 <code>ntdll.dll</code>、<code>kernel32.dll</code> 和 <code>kernelbase.dll</code>。下图显示了当前由 <code>explorer.exe</code> 进程加载的几个 DLL。</p>
-<p><img alt="Explorer-DLLs" src="../../../assets/Explorer-DLLs.png" /></p>
-<h3 id="dll_1">系统范围 DLL 基地址</h3>
-<p>Windows 操作系统使用系统范围 DLL 基地址在给定计算机上的所有进程的虚拟地址空间中加载一些 DLL，目的是优化内存使用率并提升系统性能。下图显示了在多个正在运行的进程中，<code>kernel32.dll</code> 加载到同一地址 (<code>0x7fff9fad0000</code>) 的情况。</p>
-<p><img alt="image" src="../../../assets/image-14%201.png" /></p>
-<h3 id="dll_2">使用 DLL 的原因</h3>
-<p>在 Windows 中大量使用 DLL 有以下几个原因：</p>
+<p><img alt="" src="../assets/Launch09/image-20241007180445539.png" /></p>
+<h2 id="dll_1">系统范围的 DLL 基地址</h2>
+<p>Windows 操作系统使用系统范围的 DLL 基地址在给定机器上加载一些 DLL，以便在所有进程的虚拟地址空间中使用相同的基地址，从而优化内存使用并提高系统性能。下图显示了 <code>kernel32.dll</code> 在多个运行的进程中被加载到相同的地址（ <code>0x7fff9fad0000</code> ）。</p>
+<p><img alt="" src="../assets/Launch09/image-20241007180517173.png" /></p>
+<h2 id="dlls">为什么使用 DLLs？</h2>
+<p>在 Windows 中，DLL 经常被使用有几个原因：</p>
 <ol>
-<li><strong>代码模块化</strong> - 替代包含整个功能的巨型可执行文件，代码被划分为多个独立的库，每个库关注于特定的功能。模块化让开发者在开发和调试过程中更轻松。</li>
-<li><strong>代码重用</strong> - DLL 由于能够被多个进程调用而促进了代码重用。</li>
-<li><strong>高效的内存使用</strong> - 当多个进程需要相同的 DLL 时，它们可以通过共享该 DLL 而非将其加载到进程内存中来节省内存。</li>
+<li><strong>代码模块化</strong> - 不再将整个功能包含在一个庞大的可执行文件中，而是将代码划分为几个独立的库，每个库集中于特定的功能。模块化使开发人员在开发和调试过程中更加轻松。</li>
+<li><strong>代码复用</strong> - DLL 由于能够被多个进程调用而促进了代码重用。</li>
+<li><strong>高效的内存使用</strong> - 当多个进程需要相同的 DLL 时，它们可以通过共享该 DLL 来节省内存，而不是将其加载到进程的内存中。</li>
 </ol>
-<h3 id="visual-studio-dll">在 Visual Studio 中创建 DLL 文件</h3>
-<p>要创建一个 DLL 文件，请启动 Visual Studio 并新建一个项目。当显示项目模板时，选择“动态链接库 (DLL)”选项。</p>
-<p><img alt="image" src="../../../assets/image-13%201.png" /></p>
-<p>接下来，选择保存项目文件的位置。保存项目后，将显示带有默认 DLL 代码的 <code>dllmain.cpp</code>。</p>
-<p><img alt="image" src="../../../assets/image-15.png" /></p>
-<h3 id="dll_3">DLL 入口点</h3>
-<p>回想一下，DLL 是由应用程序（如 <code>.exe</code> 文件）加载的。因此，DLL 可以指定一个入口点函数，该函数将在发生特定操作时执行代码。入口点有可能在 4 个位置被调用：</p>
+<h2 id="dll_2">DLL 入口点</h2>
+<p>DLL 可以选择指定一个入口点函数，该函数在发生某个任务时执行代码，例如当进程加载 DLL 库时。入口点被调用有 4 种可能性：</p>
 <ul>
-<li><code>DLL_PROCESS_ATTACH</code> - 进程正在加载 DLL。</li>
-<li><code>DLL_THREAD_ATTACH</code> - 进程正在创建一个新的线程。</li>
+<li><code>DLL_PROCESS_ATTACHED</code> - 一个进程正在加载 DLL。</li>
+<li><code>DLL_THREAD_ATTACHED</code> - 进程正在创建一个新线程。</li>
 <li><code>DLL_THREAD_DETACH</code> - 线程正常退出。</li>
 <li><code>DLL_PROCESS_DETACH</code> - 进程卸载 DLL。</li>
 </ul>
-<h3 id="_1">导出函数</h3>
-<p>DLL 可以导出函数以供调用应用程序使用。要导出函数，需要使用关键词 <code>extern</code> 和 <code>__declspec(dllexport)</code> 进行定义。以下 <code>sampleDLL.dll</code> 文件中展示了一个示例导出的函数 <code>HelloWorld</code>。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">////// sampleDLL.dll //////</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// 导出的函数</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">extern</span><span class="w"> </span><span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">MessageBoxA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DLL 消息&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_ICONINFORMATION</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// DLL 的入口点</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">BOOL</span><span class="w"> </span><span class="n">APIENTRY</span><span class="w"> </span><span class="n">DllMain</span><span class="p">(</span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">ul_reason_for_call</span><span class="p">,</span><span class="w"> </span><span class="n">LPVOID</span><span class="w"> </span><span class="n">lpReserved</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">ul_reason_for_call</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_ATTACH</span><span class="p">:</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_ATTACH</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_DETACH</span><span class="p">:</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_DETACH</span><span class="p">:</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+<h2 id="dll_3">示例 DLL 代码</h2>
+<p>下面的代码展示了一个典型的 DLL 代码结构。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BOOL</span><span class="w"> </span><span class="n">APIENTRY</span><span class="w"> </span><span class="n">DllMain</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">hModule</span><span class="p">,</span><span class="w">             </span><span class="c1">// DLL 模块句柄</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">ul_reason_for_call</span><span class="p">,</span><span class="w">   </span><span class="c1">// 调用函数的原因</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">LPVOID</span><span class="w"> </span><span class="n">lpReserved</span><span class="w">           </span><span class="c1">// 保留</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">ul_reason_for_call</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_ATTACHED</span><span class="p">:</span><span class="w"> </span><span class="c1">// A process is loading the DLL.</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="c1">// Do something here</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_ATTACHED</span><span class="p">:</span><span class="w"> </span><span class="c1">// A process is creating a new thread.</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="c1">// Do something here</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_DETACH</span><span class="p">:</span><span class="w"> </span><span class="c1">// A thread exits normally.</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="c1">// Do something here</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_DETACH</span><span class="p">:</span><span class="w"> </span><span class="c1">// A process unloads the DLL.</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="c1">// Do something here</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>在将 <code>sampleDLL.dll</code> 载入内存后，外部应用程序现在可以调用 <code>HelloWorld</code>。</p>
-<h3 id="_2">动态链接</h3>
-<p>可以使用 <code>LoadLibrary</code>、<code>GetModuleHandle</code> 和 <code>GetProcAddress</code> WinAPI 从 DLL 导入函数。这称为 <a href="https://learn.microsoft.com/en-us/windows/win32/dlls/run-time-dynamic-linking">动态链接</a>。这是一种在运行时加载并链接代码（DLL）的方法，而不是使用链接器和导入地址表在编译时对其进行链接。使用动态链接有几个优点；这些优点由 Microsoft <a href="https://learn.microsoft.com/en-us/windows/win32/dlls/advantages-of-dynamic-linking">在此处</a> 记录。</p>
-<p>以下部分将逐步介绍加载 DLL、检索 DLL 的句柄、检索导出的函数地址，然后从外部二进制文件调用函数。</p>
-<h3 id="1-dll">步骤 1 - 加载 DLL</h3>
-<p>从这一步开始，我们将切换到一个 EXE 文件。这是因为我们的 EXE 文件将加载 <code>sampleDLL.dll</code>，然后调用 <code>HelloWorld</code> 函数。因此，创建一个新的 Win32 控制台应用程序，然后按照说明调用 <code>HelloWorld</code>。</p>
-<p>在应用程序中调用诸如 <a href="https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messageboxa">MessageBoxA</a> 的函数时，操作系统会强制 Windows 将导出 <code>MessageBoxA</code> 函数的 DLL 加载到调用进程的内存地址空间，在本例中是 <code>user32.dll</code>。<code>user32.dll</code> 的加载是由操作系统在进程启动时自动完成，而不是由代码完成。</p>
-<p>但是，对于我们的 <code>sampleDLL.dll</code> 等自定义 DLL，该 DLL 将不会被加载到内存中。由于应用程序没有将 <code>sampleDLL.dll</code> 加载到内存中，因此需要使用 <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya">LoadLibrary</a> WinAPI，如下所示：</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
+<h2 id="_2">导出函数</h2>
+<p>DLL 可以导出函数，这些函数可以被调用的应用程序或进程使用。要导出一个函数，需要使用关键词 <code>extern</code> 和 <code>__declspec(dllexport)</code> 定义。下面是一个示例导出函数 <code>HelloWorld</code> 。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">////// sampleDLL.dll //////</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// 加载 DLL（Dynamic Link Library，动态链接库）</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// hModule 现在包含 sampleDLL.dll 的句柄</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">extern</span><span class="w"> </span><span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">(){</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Function code here</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="2-dll">第 2 步 - 检索 DLL 的句柄</h3>
-<p>如果 <code>sampleDLL.dll</code> 已加载到应用程序的内存中，则可以通过 <a href="https://learn.microsoft.com/zh-cn/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlea">GetModuleHandle</a> WinAPI 函数检索其句柄，而无需使用 <code>LoadLibrary</code> 函数。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="c1">// 尝试获取已在内存中的 DLL 的句柄</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hModule</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="c1">// 如果 DLL 未加载到内存中，使用 LoadLibrary 将其加载</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+<h2 id="_3">动态链接</h2>
+<p>可以使用 <code>LoadLibrary</code> 、 <code>GetModuleHandle</code> 和 <code>GetProcAddress</code> WinAPI 从 DLL 中导入函数。这被称为<a href="https://learn.microsoft.com/en-us/windows/win32/dlls/load-time-dynamic-linking">动态链接</a>。这是一种在运行时加载和链接代码（DLL）的方法，而不是在编译时使用链接器和导入地址表进行链接。</p>
+<p>使用动态链接有几个优点，微软在<a href="https://learn.microsoft.com/en-us/windows/win32/dlls/advantages-of-dynamic-linking">这里</a>进行了详细记录。</p>
+<p>本节介绍加载 DLL、获取 DLL 句柄、检索导出函数地址以及调用该函数的步骤。</p>
+<h3 id="dll_4">加载 DLL</h3>
+<p>调用像 <a href="https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messageboxa">MessageBoxA</a> 这样的函数会迫使 Windows 操作系统将导出 <code>MessageBoxA</code> 函数的 DLL 加载到调用进程的内存地址空间中，在本例中是 <code>user32.dll</code> 。加载 <code>user32.dll</code> 是在进程启动时由操作系统自动完成的，而不是由代码完成的。</p>
+<p>然而，在某些情况下，例如 <code>HelloWorld</code> 函数在 <code>sampleDLL.dll</code> 中，DLL 可能不会被加载到内存中。为了使应用程序调用 <code>HelloWorld</code> 函数，它需要首先检索导出该函数的 DLL 的句柄。如果应用程序没有将 <code>sampleDLL.dll</code> 加载到内存中，则需要使用 <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya">LoadLibrary</a> WinAPI，如下所示。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// hModule 现在包含 sampleDLL.dll 的句柄</span>
 </span></code></pre></div>
-<h3 id="3-">步骤 3 - 获取函数地址</h3>
-<p>一旦 DLL 加载到内存中且已检索到句柄，下一步就是检索函数的地址。此操作通过以下方式完成：<a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress">GetProcAddress</a> WinAPI，它采用导出函数的 DLL 句柄和函数名称。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="c1">// 尝试获取 DLL 的句柄</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// HMODULE：句柄类型</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hModule</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="c1">// 如果 DLL 未加载到内存中，则使用 LoadLibrary 加载它</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// PVOID：指针类型 // pHelloWorld 存储 HelloWorld 的函数地址</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+<h3 id="dll_5">检索 DLL 的句柄</h3>
+<p>如果 <code>sampleDLL.dll</code> 已经加载到应用程序的内存中，可以通过 <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlea">GetModuleHandle</a> WinAPI 函数检索其句柄，而无需使用 <code>LoadLibrary</code> 函数。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<h3 id="4-">第4步 - 进行函数地址类型转换</h3>
-<p>一旦将<code>HelloWorld</code>的地址保存在<code>pHelloWorld</code>变量中，下一步就是针对此地址执行一次类型转换，转换为<code>HelloWorld</code>的函数指针。必须使用此函数指针才能调用函数。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">// 构造新数据类型，该类型表示HelloWorld的函数指针 </span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">HelloWorldFunctionPointer</span><span class="p">)();</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1">// 尝试获取DLL的句柄</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hModule</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="c1">// 如果未在内存中加载DLL，则使用 LoadLibrary 进行加载</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">/// pHelloWorld 存储 HelloWorld 的函数地址</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">HelloWorldFunctionPointer</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HelloWorldFunctionPointer</span><span class="p">)</span><span class="n">pHelloWorld</span><span class="p">;</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">}</span>
+<h3 id="_4">检索函数的地址</h3>
+<p>一旦 DLL 加载到内存中并且句柄被检索，下一步是检索函数的地址。这是通过使用 GetProcAddress WinAPI 来完成的，它接受导出该函数的 DLL 的句柄以及函数名称。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<h3 id="-helloworld">集成 - 调用 HelloWorld</h3>
-<p>本节将上述所有步骤集成到一个名为 <code>call()</code> 的函数中。该函数将主要执行以下步骤：</p>
-<ol>
-<li>加载 <code>sampleDLL.dll</code></li>
-<li>检索 <code>HelloWorld</code> 函数的地址</li>
-<li>将 <code>HelloWorld</code> 类型转换为指针</li>
-<li>调用 <code>HelloWorld</code></li>
-</ol>
-<p>同样，这个函数是从我们的 <code>.exe</code> 程序中调用的，因为它加载了 DLL 并调用了 <code>HelloWorld</code> 函数。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">// 构建新的数据类型以表示 HelloWorld 函数指针 </span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">HelloWorldFunctionPointer</span><span class="p">)();</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">call</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// 尝试获取 DLL 句柄</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hModule</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="c1">// 如果未将 DLL 加载到内存中，则使用 LoadLibrary 加载它</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="c1">// pHelloWorld 存储 HelloWorld 函数地址</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="c1">// 将 pHelloWorld 的类型转换为 HelloWorldFunctionPointer</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="n">HelloWorldFunctionPointer</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HelloWorldFunctionPointer</span><span class="p">)</span><span class="n">pHelloWorld</span><span class="p">;</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="c1">// 调用 HelloWorld</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="n">HelloWorld</span><span class="p">();</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="p">}</span>
+<h3 id="_5">调用函数</h3>
+<p>一旦将 <code>HelloWorld</code> 的地址保存到 <code>pHelloWorld</code> 变量中，下一步是对这个地址进行类型转换为 <code>HelloWorld</code> 的函数指针。调用该函数需要这个函数指针。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Constructing a new data type that represents HelloWorld&#39;s function pointer </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">HelloWorldFunctionPointer</span><span class="p">)();</span><span class="w">  </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">call</span><span class="p">(){</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;sampleDLL.dll&quot;</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// Type-casting the &#39;pHelloWorld&#39; variable to be of type &#39;HelloWorldFunctionPointer&#39; </span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">HelloWorldFunctionPointer</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HelloWorldFunctionPointer</span><span class="p">)</span><span class="n">pHelloWorld</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">HelloWorld</span><span class="p">();</span><span class="w">   </span><span class="c1">// Calling the &#39;HelloWorld&#39; function via its function pointer </span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="-messageboxa">动态链接示例 - MessageBoxA</h3>
-<p>以下代码演示了动态链接的另一个简单示例，其中调用了 <code>MessageBoxA</code>。此代码假设导出该函数的 DLL <code>user32.dll</code> 未加载到内存中。回想一下，如果 DLL 未加载到内存中，则需要使用 <code>LoadLibrary</code> 将该 DLL 加载到进程的地址空间中。</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">MessageBoxAFunctionPointer</span><span class="p">)(</span><span class="w"> </span><span class="c1">// 创建一个新数据类型，表示 MessageBoxA 的函数指针</span>
+<h2 id="_6">动态链接示例</h2>
+<p>以下代码演示了动态链接的另一个简单示例，其中调用了 <code>MessageBoxA</code> 。代码假设 <code>user32.dll</code> ，导出该函数的 DLL，没有加载到内存中。请记住，如果 DLL 没有加载到内存中，则需要使用 <code>LoadLibrary</code> 将该 DLL 加载到进程的地址空间中。</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">MessageBoxAFunctionPointer</span><span class="p">)(</span><span class="w"> </span><span class="c1">// Constructing a new data type, that will represent MessageBoxA&#39;s function pointer </span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="n">HWND</span><span class="w">          </span><span class="n">hWnd</span><span class="p">,</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="n">LPCSTR</span><span class="w">        </span><span class="n">lpText</span><span class="p">,</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="n">LPCSTR</span><span class="w">        </span><span class="n">lpCaption</span><span class="p">,</span>
@@ -2838,106 +2799,37 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">);</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">call</span><span class="p">(){</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="c1">// 检索 MessageBox 的地址，并将其保存到 &#39;pMessageBoxA&#39;（MessageBoxA 的函数指针）</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="c1">// Retrieving MessageBox&#39;s address, and saving it to &#39;pMessageBoxA&#39; (MessageBoxA&#39;s function pointer)</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">MessageBoxAFunctionPointer</span><span class="w"> </span><span class="n">pMessageBoxA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MessageBoxAFunctionPointer</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;user32.dll&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;MessageBoxA&quot;</span><span class="p">);</span>
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pMessageBoxA</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="c1">// 如果不为空，则通过其函数指针调用 MessageBox    </span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="c1">// Calling MessageBox via its function pointer if not null    </span>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="n">pMessageBoxA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MessageBox&#39;s Text&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MessageBox&#39;s Caption&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_OK</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>函数指针</strong></p>
-<p>在该课程的后续部分，函数指针数据类型将采用一种命名约定，即在 WinAPI 名称前加上“fn”，代表“Function Pointer”。例如，上述 <code>MessageBoxAFunctionPointer</code> 数据类型将表示为 <code>fnMessageBoxA</code>。这可保持简洁并提高课程中的清晰性。</p>
-<h3 id="rundll32exe">Rundll32.exe</h3>
-<p>除了使用编程方法，还有几种方式可以运行导出函数。一种常见的技术是使用二进制文件 <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32">rundll32.exe</a>。<code>Rundll32.exe</code> 是一个内置的 Windows 二进制文件，用于运行 DLL 文件的导出函数。要运行导出函数，请使用以下命令：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rundll32.exe &lt;dll 名称&gt;, &lt;要运行的导出函数&gt;
+<h2 id="_7">函数指针</h2>
+<p>在课程的其余部分，函数指针数据类型将采用命名约定，即使用 WinAPI 的名称并在前面加上 <code>fn</code> ，代表“函数指针”。例如，上述 <code>MessageBoxAFunctionPointer</code> 数据类型将表示为 <code>fnMessageBoxA</code> 。这样做是为了保持简单并提高课程的清晰度。</p>
+<h2 id="rundll32exe">Rundll32.exe</h2>
+<p>有几种方法可以在不使用编程方法的情况下运行导出的函数。一种常见的技术是使用 rundll32.exe 二进制文件。 <code>Rundll32.exe</code> 是一个内置的 Windows 二进制文件，用于运行 DLL 文件的导出函数。要运行导出的函数，请使用以下命令：</p>
+<div class="language-PowerShell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">rundll32</span><span class="p">.</span><span class="n">exe</span> <span class="p">&lt;</span><span class="n">dllname</span><span class="p">&gt;,</span> <span class="p">&lt;</span><span class="k">function</span> <span class="n">exported</span> <span class="n">to</span> <span class="n">run</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>例如，<code>User32.dll</code> 导出函数 <code>LockWorkStation</code>，该函数锁定计算机。要运行该函数，请使用以下命令：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rundll32.exe user32.dll,LockWorkStation
+<p>例如， <code>User32.dll</code> 导出函数 <code>LockWorkStation</code> ，该函数锁定机器。要运行该函数，请使用以下命令：</p>
+<div class="language-PowerShell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">rundll32</span><span class="p">.</span><span class="n">exe</span> <span class="n">user32</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">LockWorkStation</span>
 </span></code></pre></div>
-<h3 id="_3">删除预编译头文件</h3>
-<p>当使用 Visual Studio 模板创建 DLL 文件时，DLL 模板中包含 <code>framework.h</code>、<code>pch.h</code> 和 <code>pch.cpp</code>，这些文件称为 <a href="https://zh.wikipedia.org/wiki/%E9%A2%84%E7%B9%81%E6%88%90%E5%A4%B4%E6%96%87%E4%BB%B6">预编译头文件</a>。这些文件用于加快大型项目的编译速度。在本文档所讨论的情况下，你不太可能需要这些文件，因此建议按照以下步骤删除这些文件。</p>
-<p>首先，使用 Visual Studio 的 DLL 模板创建一个新的 DLL 文件，如前面所示。</p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-2%201.png" /></p>
-<p>接下来，打开项目，高亮显示 <code>framework.h</code>、<code>pch.h</code> 和 <code>pch.cpp</code>，然后按 Delete 键并选择“删除”选项。</p>
-<p>你还需要从 <code>dllmain.cpp</code> 中删除 <code>#include "pch.h"</code>，并将其替换为 <code>#include &lt;Windows.h&gt;</code>。</p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-3%201.png" /></p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-1%201.png" /></p>
-<p>删除预编译头文件后，必须更改编译器的默认设置，以确认项目中不应使用预编译头文件。</p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-5%201.png" /></p>
-<p>转到 <strong>C/C++ &gt; 预编译头文件</strong></p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-4%201.png" /></p>
-<p>将“预编译头文件”选项更改为“不使用预编译头文件”，然后按“应用”。</p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-3%201.png" /></p>
-<p>最后，将 <code>dllmain.cpp</code> 文件更改为 <code>dllmain.c</code>。这是必需的，因为 Maldev Academy 中提供的代码片段使用 C 而不是 C++。若要编译程序，请单击“生成”&gt;“生成解决方案”，然后在 <em>Release</em> 或 <em>Debug</em> 文件夹下（具体取决于编译配置）创建一个 DLL。</p>
-<h3 id="_4">目标</h3>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 查看 DLL 的 4 个入口点</p>
-</li>
-<li>
-<p><code>DLL_PROCESS_ATTACH</code> - 进程正在加载 DLL。</p>
-</li>
-<li><code>DLL_THREAD_ATTACH</code> - 进程正在创建一个新的线程。</li>
-<li><code>DLL_THREAD_DETACH</code> - 线程正常退出。</li>
-<li>
-<p><code>DLL_PROCESS_DETACH</code> - 进程卸载 DLL。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 阅读有关 LoadLibrary、GetModuleHandle 和 GetProcAddress 的文档</p>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 创建导出函数的 DLL</li>
-</ul>
-<p>设置不使用预编译头</p>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// dllmain.c</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">// 导出的函数</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">extern</span><span class="w"> </span><span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">MessageBoxA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DLL 消息&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_ICONINFORMATION</span><span class="p">);</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1">// DLL 的入口点</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">BOOL</span><span class="w"> </span><span class="n">APIENTRY</span><span class="w"> </span><span class="n">DllMain</span><span class="p">(</span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">ul_reason_for_call</span><span class="p">,</span><span class="w"> </span><span class="n">LPVOID</span><span class="w"> </span><span class="n">lpReserved</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">ul_reason_for_call</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_ATTACH</span><span class="p">:</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_ATTACH</span><span class="p">:</span>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_THREAD_DETACH</span><span class="p">:</span>
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">DLL_PROCESS_DETACH</span><span class="p">:</span>
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="p">}</span>
-</span></code></pre></div>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 Rundll32.exe 调用该函数</li>
-</ul>
-<p><img alt="" src="../../../assets/Pasted%20image%2020240726101615.png" /></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 创建一个加载 DLL 的 EXE 程序。使用 Process Hacker 验证 DLL 是否已加载</li>
-</ul>
-<div class="language-C highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">// 构造新数据类型，该类型表示HelloWorld的函数指针 </span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">WINAPI</span><span class="o">*</span><span class="w"> </span><span class="n">HelloWorldFunctionPointer</span><span class="p">)();</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="c1">// 加载 DLL（Dynamic Link Library，动态链接库）</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetModuleHandleA</span><span class="p">(</span><span class="s">&quot;SimpleDll.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hModule</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="n">hModule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;SimpleDll.dll&quot;</span><span class="p">);</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pHelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">);</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="n">HelloWorldFunctionPointer</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HelloWorldFunctionPointer</span><span class="p">)</span><span class="n">pHelloWorld</span><span class="p">;</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="n">HelloWorld</span><span class="p">();</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>注意编译的版本架构要和 DLL 一致，比如两者都是 x64 版本。</p>
+<h2 id="visual-studio-dll">使用 Visual Studio 创建 DLL 文件</h2>
+<p><img alt="" src="../assets/Launch09/image-20241007181652315.png" /></p>
+<p>接下来，选择保存项目文件的位置。完成后，应该显示以下 C 代码。</p>
+<p><img alt="" src="../assets/Launch09/image-20241007181700168.png" /></p>
+<p>提供的 DLL 模板包含 <code>framework.h</code> 、 <code>pch.h</code> 和 <code>pch.cpp</code> ，它们被称为<a href="https://en.wikipedia.org/wiki/Precompiled_header">预编译头</a>。这些文件用于加速大型项目的编译。鉴于这种情况不太可能需要这些文件，因此建议删除它们。要执行此操作，请突出显示该文件，然后按删除键并选择“删除”选项。</p>
+<p><img alt="" src="../assets/Launch09/image-20241007181734369.png" /></p>
+<p><img alt="" src="../assets/Launch09/image-20241007181737697.png" /></p>
+<p>删除预编译头后，必须更改编译器的默认设置，以确认项目中不应使用预编译头。</p>
+<p><img alt="" src="../assets/Launch09/image-20241007181754000.png" /></p>
+<p>前往 C/C++ &gt; 高级选项卡</p>
+<p><img alt="" src="../assets/Launch09/image-20241007181802538.png" /></p>
+<p>将“预编译头”选项更改为“未使用预编译头”，然后点击“应用”。</p>
+<p><img alt="" src="../assets/Launch09/image-20241007181809525.png" /></p>
+<p>最后，将 <code>dllmain.cpp</code> 文件更改为 <code>dllmain.c</code> 。这是必需的，因为 Maldev Academy 中提供的代码示例使用 C 而不是 C++。要编译程序，请点击“生成” &gt; “生成解决方案”，并根据编译配置，在 Release 或 Debug 文件夹下会创建一个 DLL。</p>
 
 
 
@@ -3070,7 +2962,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.path", "navigation.prune", "navigation.top", "navigation.footer", "navigation.indexes", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
