@@ -18,5 +18,11 @@ jobs:
       - name: copy 新的 profile
         run: cp -r profile/* .
 
-      - name: 提交请求
-        uses: ad-m/github-push-action@master
+      - name: add
+        run: git add -A
+
+      - name: commit
+        run: git commit -m "`date "+%Y-%m-%d_%H:%M:%S"`"
+
+      - name: push
+        run: git push origin main -f
