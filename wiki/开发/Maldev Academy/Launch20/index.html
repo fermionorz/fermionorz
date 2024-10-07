@@ -993,7 +993,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1014,7 +1014,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1035,7 +1035,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -1184,6 +1184,15 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       代码示例
     </span>
   </a>
@@ -1192,9 +1201,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#shellcode" class="md-nav__link">
+  <a href="#raw-shellcode" class="md-nav__link">
     <span class="md-ellipsis">
-      原始 Shellcode
+      Raw Shellcode
     </span>
   </a>
   
@@ -1229,15 +1238,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
-    </span>
-  </a>
   
 </li>
       
@@ -2438,6 +2438,15 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       代码示例
     </span>
   </a>
@@ -2446,9 +2455,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#shellcode" class="md-nav__link">
+  <a href="#raw-shellcode" class="md-nav__link">
     <span class="md-ellipsis">
-      原始 Shellcode
+      Raw Shellcode
     </span>
   </a>
   
@@ -2486,15 +2495,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2511,100 +2511,35 @@
 
 
 <h1 id="20-microsoft-defender"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 20 - 规避 Microsoft Defender 静态分析</h1>
-<p>此模块提供了一个使用 XOR、RC4 和 AES 加密算法来绕过 Microsoft Defender 静态分析引擎的示例。在模块的此点，有效载荷尚未执行，而只是简单地打印到控制台。因此，此模块将专门专注于静态/签名规避。</p>
-<h3 id="_1">代码示例</h3>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行原始 shellcode 代码示例，并验证 Microsoft Defender 是否检测到它</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行剩余的代码示例（XOR、RC4、AES），并验证 Microsoft Defender 不会检测到它们。</li>
+</ul>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p>此模块提供了一个使用 XOR、RC4 和 AES 加密算法的示例，以绕过 Microsoft Defender 的静态分析引擎。在此模块的阶段，负载并未被执行，而只是打印到控制台。因此，本模块将专注于静态/签名规避。</p>
+<h2 id="_2">代码示例</h2>
 <p>此模块使用 4 个可供下载的代码示例。每个代码示例都使用 Msfvenom shellcode。</p>
 <ol>
 <li>原始 Shellcode - 被 Defender 检测出</li>
-<li>XOR 加密 Shellcode - 成功规避 Defender</li>
-<li>AES 加密 Shellcode - 成功规避 Defender</li>
-<li>RC4 加密 Shellcode - 成功规避 Defender</li>
+<li>XOR 加密 Shellcode - 成功规避 Defender（现在应该不行了）</li>
+<li>AES 加密 Shellcode - 成功规避 Defender（依然 OK）</li>
+<li>RC4 加密 Shellcode - 成功规避 Defender（现在应该不行了）</li>
 </ol>
-<p>下文列出了正在执行的二进制文件和 Microsoft Defender 的响应。回想一下，Microsoft Defender 为 <code>C:\Users\MalDevUser\Desktop\Module-Code</code> 文件夹预先配置了排除项。</p>
-<h4 id="shellcode">原始 Shellcode</h4>
-<p><img alt="" src="https://maldevacademy.s3.amazonaws.com/images/Basic/raw-shellcode-defender.png" /></p>
-<p>原始 Shellcode 是为立即在攻击者的计算机上执行命令而设计的未编译代码。这是一种高级技术，通常用于远程执行代码 (Remote Code Execution, RCE) 攻击。</p>
-<p>原始 Shellcode 通常使用汇编语言编写，直接与 CPU 的指令集交互。攻击者可以创建自定义 Shellcode，以便执行特定操作，例如：</p>
-<ul>
-<li>下载并执行恶意文件</li>
-<li>从远程服务器窃取数据</li>
-<li>禁用安全措施</li>
-<li>获得对受感染系统的远程访问</li>
-</ul>
-<p>原始 Shellcode 可以通过多种方式执行，例如：</p>
-<ul>
-<li>通过电子邮件附件</li>
-<li>通过网络漏洞</li>
-<li>通过恶意软件下载器</li>
-<li>通过 USB 驱动器</li>
-</ul>
-<p>对于经验丰富的恶意软件分析人员和安全研究人员来说，检测和分析原始 Shellcode 是一种复杂的任务。然而，随着安全技术的不断发展，新的工具和技术不断涌现，以帮助识别和阻止原始 Shellcode 攻击。</p>
-<h4 id="xor">XOR 加密</h4>
-<p><img alt="image" src="https://maldevacademy.s3.amazonaws.com/images/Basic/xor-shellcode-defender.png" /></p>
-<p><strong>原理</strong></p>
-<p>异或（XOR）是一种简单的加密算法，它通过将每个字节与一个密钥值进行异或运算来加密数据。</p>
-<p>XOR 操作符（^)执行位运算，将两个比特（0 或 1）结合起来。如果两个比特相同，则结果为 0；如果不同，则结果为 1。</p>
-<p><strong>示例</strong></p>
-<p>要使用密钥 0x42 对字符串 "Hello" 进行加密，可以执行以下操作：</p>
-<table>
-<thead>
-<tr>
-<th>原文字节</th>
-<th>密钥</th>
-<th>XOR 结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x48</td>
-<td>0x42</td>
-<td>0x06</td>
-</tr>
-<tr>
-<td>0x65</td>
-<td>0x42</td>
-<td>0x27</td>
-</tr>
-<tr>
-<td>0x6C</td>
-<td>0x42</td>
-<td>0x29</td>
-</tr>
-<tr>
-<td>0x6C</td>
-<td>0x42</td>
-<td>0x29</td>
-</tr>
-<tr>
-<td>0x6F</td>
-<td>0x42</td>
-<td>0x2B</td>
-</tr>
-</tbody>
-</table>
-<p>加密后的结果是 "0x062729292B"。</p>
-<p><strong>解密</strong></p>
-<p>要解密使用 XOR 加密的数据，只需再次使用相同的密钥执行异或运算。这将恢复原始数据。</p>
-<p><strong>局限</strong></p>
-<p>XOR 加密是一种简单的加密方法，对于保护敏感数据并不安全。以下是一些限制：</p>
-<ul>
-<li><strong>容易破解：</strong>由于 XOR 是一种线性操作，因此可以通过已知明文攻击轻松破解。</li>
-<li><strong>密钥长度有限：</strong>密钥的长度与数据的长度相同。</li>
-<li><strong>不提供数据完整性：</strong>XOR 不会检测到对加密数据所做的更改。</li>
-</ul>
-<h4 id="aes">AES 加密</h4>
-<p><img alt="image" src="https://maldevacademy.s3.amazonaws.com/images/Basic/aes-shellcode-defender.png" /></p>
-<h4 id="rc4">RC4 加密</h4>
-<p><img alt="image" src="https://maldevacademy.s3.amazonaws.com/images/Basic/rc4-shellcode-defender.png" /></p>
-<h3 id="_2">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行原始 shellcode 代码示例并验证 Microsoft Defender 是否检测到它</li>
-</ul>
-<p>原始 shellcode 会被检测到</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行其余代码示例（XOR、RC4、AES）并验证 Microsoft Defender 未检测到它们。</li>
-</ul>
-<p>XOR 会被检测到；RC4、AES 不会被检测到</p>
+<p>下面的部分显示了正在执行的二进制文件和 Microsoft Defender 的响应。</p>
+<h3 id="raw-shellcode">Raw Shellcode</h3>
+<p><img alt="" src="../assets/Launch20/image-20241007234229335.png" /></p>
+<h3 id="xor">XOR 加密</h3>
+<p><img alt="" src="../assets/Launch20/image-20241007234304944.png" /></p>
+<h3 id="aes">AES 加密</h3>
+<p><img alt="" src="../assets/Launch20/image-20241007234330887.png" /></p>
+<h3 id="rc4">RC4 加密</h3>
+<p><img alt="" src="../assets/Launch20/image-20241007234339853.png" /></p>
+<hr />
+<p><a class="md-button" href="../assets/Launch20/20.WinDef.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
 
 

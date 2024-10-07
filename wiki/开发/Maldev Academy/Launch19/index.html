@@ -993,7 +993,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1014,7 +1014,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1035,7 +1035,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -1161,13 +1161,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#winapibcrypt-aes" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 WinAPI（bCrypt 库）实现 AES
+      高级加密标准
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="使用 WinAPI（bCrypt 库）实现 AES">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#winapi-aesbcrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 WinAPI 的 AES（bCrypt 库）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 WinAPI 的 AES（bCrypt 库）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1189,18 +1198,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      加密包装函数
+      简单解密封装器
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cryptographic-next-generation-cng" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Cryptographic Next Generation (CNG)
+      下一代加密技术
     </span>
   </a>
   
@@ -1225,18 +1234,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      其他辅助函数
+      附加辅助函数
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
+  <a href="#padding" class="md-nav__link">
     <span class="md-ellipsis">
-      主函数 - 加密
+      填充（Padding）
     </span>
   </a>
   
@@ -1245,9 +1254,24 @@
           <li class="md-nav__item">
   <a href="#main-" class="md-nav__link">
     <span class="md-ellipsis">
-      Main 函数 - 解密
+      main 函数 - 加密
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="main 函数 - 加密">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      main 函数 - 解密
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1268,11 +1292,11 @@
         <li class="md-nav__item">
   <a href="#tiny-aes-aes" class="md-nav__link">
     <span class="md-ellipsis">
-      Tiny-AES 库中的 AES 加密
+      使用 Tiny-AES 库的 AES
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tiny-AES 库中的 AES 加密">
+    <nav class="md-nav" aria-label="使用 Tiny-AES 库的 AES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1303,7 +1327,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       自定义填充函数
     </span>
@@ -1339,18 +1363,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       总结
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
     </span>
   </a>
   
@@ -2577,13 +2592,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#winapibcrypt-aes" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 WinAPI（bCrypt 库）实现 AES
+      高级加密标准
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="使用 WinAPI（bCrypt 库）实现 AES">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#winapi-aesbcrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 WinAPI 的 AES（bCrypt 库）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 WinAPI 的 AES（bCrypt 库）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2605,18 +2629,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      加密包装函数
+      简单解密封装器
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cryptographic-next-generation-cng" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Cryptographic Next Generation (CNG)
+      下一代加密技术
     </span>
   </a>
   
@@ -2641,18 +2665,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      其他辅助函数
+      附加辅助函数
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
+  <a href="#padding" class="md-nav__link">
     <span class="md-ellipsis">
-      主函数 - 加密
+      填充（Padding）
     </span>
   </a>
   
@@ -2661,9 +2685,24 @@
           <li class="md-nav__item">
   <a href="#main-" class="md-nav__link">
     <span class="md-ellipsis">
-      Main 函数 - 解密
+      main 函数 - 加密
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="main 函数 - 加密">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      main 函数 - 解密
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2684,11 +2723,11 @@
         <li class="md-nav__item">
   <a href="#tiny-aes-aes" class="md-nav__link">
     <span class="md-ellipsis">
-      Tiny-AES 库中的 AES 加密
+      使用 Tiny-AES 库的 AES
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tiny-AES 库中的 AES 加密">
+    <nav class="md-nav" aria-label="使用 Tiny-AES 库的 AES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2719,7 +2758,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       自定义填充函数
     </span>
@@ -2755,18 +2794,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       总结
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
     </span>
   </a>
   
@@ -2793,14 +2823,26 @@
 
 
 <h1 id="19-payload-aes"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 19 - Payload 加密 - AES 加密</h1>
-<p>本模块探讨一种更安全的加密算法：高级加密标准 (AES)。它是一种对称密钥算法，表示加密和解密都使用相同的密钥。AES 加密有数种类型，如 AES128、AES192 和 AES256，它们按密钥大小有所不同。例如，AES128 使用 128 位密钥，而 AES256 使用 256 位密钥。</p>
-<p>此外，AES 可以使用不同的 <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">分组密码操作模式</a>，如 CBC 和 GCM。根据 AES 模式，AES 算法将需要一个附加组件以及称为 <a href="https://en.wikipedia.org/wiki/Initialization_vector">初始化向量</a> 或 IV 的加密密钥。提供 IV 可为加密过程提供额外的安全层。</p>
-<p>无论选择哪种 AES 类型，AES 都始终需要 128 位输入并生成 128 位输出块。请记住，输入数据应为 16 字节（128 位）的倍数。如果要加密的有效负载不是 16 字节的倍数，则需要填充以增加有效负载的大小并使其成为 16 字节的倍数。</p>
-<p>该模块提供了 2 个使用 AES256-CBC 的代码示例。第一个示例通过利用 WinAPI 的 bCrypt 库实现，而第二个示例使用 <a href="https://github.com/kokke/tiny-AES-c">Tiny Aes Project</a>。请注意，由于正在使用 AES256-CBC，因此该代码使用了 32 字节密钥和 16 字节 IV。同样，如果该代码使用其他 AES 类型或模式，它将有所不同。</p>
-<h3 id="winapibcrypt-aes">使用 WinAPI（bCrypt 库）实现 AES</h3>
-<p>有多种方法可以实现 AES 加密算法。本节利用 bCrypt 库（<a href="https://learn.microsoft.com/en-us/windows/win32/api/bcrypt/">bcrypt.h</a>) 来执行 AES 加密。本节将解释该代码，该代码像往常一样可以在模块框的右上角下载。</p>
-<h4 id="aes">AES 结构</h4>
-<p>首先，创建一个 <code>AES</code> 结构，其中包含执行加密和解密所需的必需数据。</p>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 了解 AES 加密是如何工作的</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 审查提供的代码</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行代码以加密和解密您的 shellcode</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 Windows API 对您的 shellcode 进行 AES 加密</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 Tiny-AES 库对您的 shellcode 进行 AES 加密</li>
+</ul>
+</details>
+<hr />
+<h2 id="_1">高级加密标准</h2>
+<p>该模块讨论了一种更安全的加密算法，高级加密标准（AES）。它是一种对称密钥算法，这意味着用于加密和解密的密钥是相同的。AES 加密有几种类型，如 AES128、AES192 和 AES256，按密钥大小有所不同。例如，AES128 使用 128 位密钥，而 AES256 使用 256 位密钥。</p>
+<p>另外，AES 可以使用不同的 <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">块密码操作模式</a>，例如 CBC 和 GCM。根据 AES 模式，AES 算法将需要一个额外的组件，称为 <a href="https://en.wikipedia.org/wiki/Initialization_vector">初始化向量</a> 或 IV，除了加密密钥。提供 IV 为加密过程提供了额外的安全层。</p>
+<p>无论选择哪种 AES 类型，AES 始终需要 128 位输入并生成 128 位输出块。需要记住的重要一点是，输入数据应为 16 字节（128 位）的倍数。如果被加密的有效负载不是 16 字节的倍数，则需要填充以增加有效负载的大小，使其成为 16 字节的倍数。</p>
+<p>该模块提供了两个使用 AES256-CBC 的代码示例。第一个示例通过 bCrypt 库实现，该库利用 WinAPI ，第二个示例使用 <a href="https://github.com/kokke/tiny-AES-c">Tiny Aes Project</a>。请注意，由于使用了 AES256-CBC，代码使用一个 32 字节的密钥和一个 16 字节的 IV。如果代码使用不同的 AES 类型或模式，这将有所不同。</p>
+<h2 id="winapi-aesbcrypt">使用 WinAPI 的 AES（bCrypt 库）</h2>
+<p>有多种方法可以实现 AES 加密算法。本节使用 bCrypt 库（<a href="https://learn.microsoft.com/en-us/windows/win32/api/bcrypt/">bcrypt.h</a>) 进行 AES 加密。本节将解释该代码，该代码像往常一样可以在模块框的右上角下载。</p>
+<h3 id="aes">AES 结构</h3>
+<p>首先，创建一个 <code>AES</code> 结构，其中包含执行加密和解密所需的数据。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_AES</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">PBYTE</span><span class="w">   </span><span class="n">pPlainText</span><span class="p">;</span><span class="w">         </span><span class="c1">// 明文数据的基地址</span>
@@ -2814,13 +2856,13 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span><span class="w"> </span><span class="n">AES</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">PAES</span><span class="p">;</span>
 </span></code></pre></div>
-<h4 id="simpleencryption">SimpleEncryption 包装器</h4>
-<p><code>SimpleEncryption</code> 函数有六个参数，用于初始化 <code>AES</code> 结构。一旦结构初始化，该函数将调用 <code>InstallAesEncryption</code> 来执行 AES 加密过程。请注意，其中的两个参数是 <code>OUT</code> 参数，因此函数返回以下内容：</p>
+<h3 id="simpleencryption">SimpleEncryption 包装器</h3>
+<p><code>SimpleEncryption</code> 函数有六个参数，用于初始化 <code>AES</code> 结构。一旦结构被初始化，函数将调用 <code>InstallAesEncryption</code> 来执行 AES 加密过程。请注意，它的两个参数是 <code>OUT</code> 参数，因此函数返回以下内容：</p>
 <ul>
 <li><code>pCipherTextData</code> - 指向包含密文数据的最新分配堆缓冲区的指针。</li>
 <li><code>sCipherTextSize</code> - 密文缓冲区的大小。</li>
 </ul>
-<p>如果 <code>InstallAesEncryption</code> 成功，则该函数返回 <code>TRUE</code>，否则返回 <code>FALSE</code>。</p>
+<p>该函数在 <code>InstallAesEncryption</code> 成功时返回 <code>TRUE</code> ，否则返回 <code>FALSE</code> 。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// 封装 InstallAesEncryption 的函数，简化操作</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">BOOL</span><span class="w"> </span><span class="nf">SimpleEncryption</span><span class="p">(</span><span class="n">IN</span><span class="w"> </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pPlainTextData</span><span class="p">,</span><span class="w"> </span><span class="n">IN</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">sPlainTextSize</span><span class="p">,</span><span class="w"> </span><span class="n">IN</span><span class="w"> </span><span class="n">PBYTE</span><span class="w"> </span><span class="n">pKey</span><span class="p">,</span><span class="w"> </span><span class="n">IN</span><span class="w"> </span><span class="n">PBYTE</span><span class="w"> </span><span class="n">pIv</span><span class="p">,</span><span class="w"> </span><span class="n">OUT</span><span class="w"> </span><span class="n">PVOID</span><span class="o">*</span><span class="w"> </span><span class="n">pCipherTextData</span><span class="p">,</span><span class="w"> </span><span class="n">OUT</span><span class="w"> </span><span class="n">DWORD</span><span class="o">*</span><span class="w"> </span><span class="n">sCipherTextSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -2846,8 +2888,8 @@
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="_1">加密包装函数</h4>
-<p><code>SimpleDecryption</code> 函数也包含六个参数，其行为和 <code>SimpleEncryption</code> 类似，不同之处在于它调用了 <code>InstallAesDecryption</code> 函数，它会返回两个不同的值。</p>
+<h3 id="_2">简单解密封装器</h3>
+<p><code>SimpleDecryption</code> 函数也有六个参数，行为与 <code>SimpleEncryption</code> 类似，不同之处在于它调用 <code>InstallAesDecryption</code> 函数，并返回两个不同的值。</p>
 <ul>
 <li><code>pPlainTextData</code> - 指向新分配的堆缓冲区，其中包含明文数据。</li>
 <li><code>sPlainTextSize</code> - 明文缓冲区的大小。</li>
@@ -2878,19 +2920,19 @@
 </span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="cryptographic-next-generation-cng">Cryptographic Next Generation (CNG)</h4>
-<p>Cryptographic Next Generation (CNG) 是一组可供操作系统应用程序使用的加密函数。CNG 提供了一个标准化的加密操作接口，使得开发人员在应用程序中实现安全功能变得更加容易。<strong>InstallAesEncryption</strong> 和 <strong>InstallAesDecryption</strong> 函数均使用 CNG。</p>
+<h3 id="_3">下一代加密技术</h3>
+<p>下一代加密技术（Cryptographic Next Generation (CNG)）提供了一组可以被操作系统应用程序使用的加密功能。CNG 为加密操作提供了一个标准化接口，使开发人员更容易在其应用程序中实现安全功能。 <code>InstallAesEncryption</code> 和 <code>InstallAesDecryption</code> 函数都利用了 CNG。</p>
 <p>有关 CNG 的更多信息，请参阅 <a href="https://learn.microsoft.com/zh-cn/windows/win32/seccng/cng-portal">此处</a>。</p>
-<h4 id="installaesencryption">InstallAesEncryption 函数</h4>
-<p><code>InstallAesEncryption</code> 是执行 AES 加密的函数。该函数有一个参数 <code>PAES</code>，它是已填充的 <code>AES</code> 结构的指针。函数中使用的 bCrypt 库函数如下所示：</p>
+<h3 id="installaesencryption">InstallAesEncryption 函数</h3>
+<p><code>InstallAesEncryption</code> 是执行 AES 加密的函数。该函数有一个参数 <code>PAES</code> ，它是指向填充的 <code>AES</code> 结构的指针。函数中使用的 bCrypt 库函数如下所示。</p>
 <ul>
 <li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptopenalgorithmprovider">BCryptOpenAlgorithmProvider</a> - 用于加载 <a href="https://learn.microsoft.com/zh-cn/windows/win32/seccng/cng-algorithm-identifiers">BCRYPT_AES_ALGORITHM</a> 密码学下一代 (CNG) 提供程序，以启用密码学函数的使用。</li>
 <li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptgetproperty">BCryptGetProperty</a> - 该函数被调用两次，第一次检索 <a href="https://learn.microsoft.com/zh-cn/windows/win32/seccng/cng-property-identifiers">BCRYPT_OBJECT_LENGTH</a> 的值，第二次检索 <a href="https://learn.microsoft.com/zh-cn/windows/win32/seccng/cng-property-identifiers">BCRYPT_BLOCK_LENGTH</a> 属性标识符的值。</li>
 <li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptsetproperty">BCryptSetProperty</a> - 用于初始化 <code>BCRYPT_OBJECT_LENGTH</code> 属性标识符。</li>
 <li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptgeneratesymmetrickey">BCryptGenerateSymmetricKey</a> - 用于从指定的输入 AES 密钥创建一个密钥对象。</li>
 <li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptencrypt">BCryptEncrypt</a> - 用于加密指定的数据块。该函数被调用两次，第一次检索加密数据的大小以分配该大小的堆缓冲区。第二次调用加密数据并将密文存储在分配的堆中。</li>
-<li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptdestroykey">BCryptDestroyKey</a> - 用于清理，通过销毁使用 <code>BCryptGenerateSymmetricKey</code> 创建的密钥对象。</li>
-<li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptclosealgorithmprovider">BCryptCloseAlgorithmProvider</a> - 用于清理，通过关闭之前使用 <code>BCryptOpenAlgorithmProvider</code> 创建的算法提供者的对象句柄。</li>
+<li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptdestroykey">BCryptDestroyKey</a> - 用于通过销毁使用 <code>BCryptGenerateSymmetricKey</code> 创建的密钥对象来进行清理。</li>
+<li><a href="https://learn.microsoft.com/zh-cn/windows/win32/api/bcrypt/nf-bcrypt-bcryptclosealgorithmprovider">BCryptCloseAlgorithmProvider</a> - 用于通过关闭先前使用 <code>BCryptOpenAlgorithmProvider</code> 创建的算法提供程序的对象句柄来清理。</li>
 </ul>
 <p>如果函数成功加密有效负载，则返回 <code>TRUE</code>，否则返回 <code>FALSE</code>。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// 加密实现</span>
@@ -2993,8 +3035,8 @@
 </span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">bSTATE</span><span class="p">;</span>
 </span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="installaesdecryption">InstallAesDecryption 函数</h4>
-<p><code>InstallAesDecryption</code> 函数执行 AES 解密。该函数有一个参数 <code>PAES</code>，它是指向已填充的 <code>AES</code> 结构的指针。该函数中使用的 bCrypt 库函数与上面 <code>InstallAesEncryption</code> 函数中是一样的，唯一的区别在于使用 <code>BCryptDecrypt</code> 而非 <code>BCryptEncrypt</code>。</p>
+<h3 id="installaesdecryption">InstallAesDecryption 函数</h3>
+<p><code>InstallAesDecryption</code> 是执行 AES 解密的函数。该函数有一个参数 <code>PAES</code> ，这是一个指向填充的 <code>AES</code> 结构的指针。该函数中使用的 bCrypt 库函数与上面的 <code>InstallAesEncryption</code> 函数相同，唯一的区别是使用 <code>BCryptDecrypt</code> 代替 <code>BCryptEncrypt</code> 。</p>
 <ul>
 <li><a href="https://learn.microsoft.com/en-us/windows/win32/api/bcrypt/nf-bcrypt-bcryptdecrypt">BCryptDecrypt</a> - 用于解密指定的数据块。此函数被调用两次，第一次调用检索解密后的数据大小，来分配此大小的堆缓冲区。第二次调用解密数据，并将明文数据存储在分配的堆中。</li>
 </ul>
@@ -3098,9 +3140,9 @@
 </span><span id="__span-4-97"><a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>
 </span><span id="__span-4-98"><a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="_2">其他辅助函数</h4>
-<p>该代码还包含两个小辅助函数：<code>PrintHexData</code> 和 <code>GenerateRandomBytes</code>。</p>
-<p>第一个函数 <code>PrintHexData</code> 将输入缓冲区按 C 语法打印为字符数组并输出到控制台。</p>
+<h3 id="_4">附加辅助函数</h3>
+<p>代码还包括两个小的辅助函数， <code>PrintHexData</code> 和 <code>GenerateRandomBytes</code> 。</p>
+<p>第一个函数 <code>PrintHexData</code> 将输入缓冲区作为 C 语法中的字符数组打印到控制台。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// 以十六进制字符数组将输入缓冲区打印出来</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">VOID</span><span class="w"> </span><span class="nf">PrintHexData</span><span class="p">(</span><span class="n">LPCSTR</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">PBYTE</span><span class="w"> </span><span class="n">Data</span><span class="p">,</span><span class="w"> </span><span class="n">SIZE_T</span><span class="w"> </span><span class="n">Size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
@@ -3121,7 +3163,7 @@
 </span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>另一个函数 <code>GenerateRandomBytes</code> 用随机字节填充输入缓冲区，在该函数中，这些字节用于生成随机密钥和 IV。</p>
+<p>另一个函数 <code>GenerateRandomBytes</code> 用随机字节填充输入缓冲区，在这种情况下用于生成随机密钥和初始化向量（IV）。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// 生成大小为 sSize 的随机字节</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">VOID</span><span class="w"> </span><span class="nf">GenerateRandomBytes</span><span class="p">(</span><span class="n">PBYTE</span><span class="w"> </span><span class="n">pByte</span><span class="p">,</span><span class="w"> </span><span class="n">SIZE_T</span><span class="w"> </span><span class="n">sSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
@@ -3132,10 +3174,10 @@
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>填充</strong></p>
-<p><code>InstallAesEncryption</code> 和 <code>InstallAesDecryption</code> 函数分别与 bcrypt 函数 <code>BCryptEncrypt</code> 和 <code>BCryptDecrypt</code> 一起使用 <code>BCRYPT_BLOCK_PADDING</code> 标志，在需要时自动填充输入缓冲区以使其成为 16 字节的倍数，从而解决 AES 填充问题。</p>
-<h4 id="-">主函数 - 加密</h4>
-<p>下面的主函数用于对纯文本数据数组执行加密例程。</p>
+<h3 id="padding">填充（Padding）</h3>
+<p><code>InstallAesEncryption</code> 和 <code>InstallAesDecryption</code> 函数分别使用 <code>BCRYPT_BLOCK_PADDING</code> 标志与 <code>BCryptEncrypt</code> 和 <code>BCryptDecrypt</code> bcrypt 函数，当需要时，将自动填充输入缓冲区，使其成为 16 字节的倍数，从而解决 AES 填充问题。</p>
+<h3 id="main-">main 函数 - 加密</h3>
+<p>下面的主要功能用于对明文数据数组执行加密例程。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// 纯文本，以十六进制格式，将被加密</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">// 这是十六进制中的以下字符串“This is a plain text string, we&#39;ll try to encrypt/decrypt !”</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -3173,14 +3215,14 @@
 </span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="c1">// 将加密后的缓冲区打印为十六进制数组</span>
 </span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="n">PrintHexData</span><span class="p">(</span><span class="s">&quot;CipherText&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pCipherText</span><span class="p">,</span><span class="w"> </span><span class="n">dwCipherSize</span><span class="p">);</span>
 </span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>
-</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="c1">// 清除</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="c1">// 释放内存</span>
 </span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">    </span><span class="n">HeapFree</span><span class="p">(</span><span class="n">GetProcessHeap</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">pCipherText</span><span class="p">);</span>
 </span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;PAUSE&quot;</span><span class="p">);</span>
 </span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><img alt="image" src="../../../assets/image-2%201.png" /></p>
-<h4 id="main-">Main 函数 - 解密</h4>
+<p><img alt="" src="../assets/Launch19/image-20241007233423497.png" /></p>
+<h4 id="main-_1">main 函数 - 解密</h4>
 <p>下面的主函数用于执行解密程序。解密程序需要解密密钥、IV 和密文。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// 打印到屏幕的密钥</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">pKey</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -3213,42 +3255,42 @@
 </span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">    </span><span class="c1">// 以十六进制格式将解密数据打印到屏幕</span>
 </span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="n">PrintHexData</span><span class="p">(</span><span class="s">&quot;PlainText&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pPlaintext</span><span class="p">,</span><span class="w"> </span><span class="n">dwPlainSize</span><span class="p">);</span>
 </span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">    </span><span class="c1">// 将打印：“This is a plain text string, we&#39;ll try to encrypt/decrypt !”</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">    </span><span class="c1">// 打印：&quot;This is a plain text string, we&#39;ll try to encrypt/decrypt !&quot;</span>
 </span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Data: %s </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pPlaintext</span><span class="p">);</span>
 </span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span><span class="c1">// 清除</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span><span class="c1">// 释放内存</span>
 </span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span><span class="n">HeapFree</span><span class="p">(</span><span class="n">GetProcessHeap</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">pPlaintext</span><span class="p">);</span>
 </span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;PAUSE&quot;</span><span class="p">);</span>
 </span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87%201.png" /></p>
-<h4 id="bcrypt">bCrypt 库的缺点</h4>
-<p>上面概述的实现 AES 加密的方法的主要缺点之一是使用密码 WinAPI 会导致它们出现在二进制文件的导入地址表 (IAT) 中。安全解决方案可以通过扫描 IAT 来检测加密函数的使用，这可能会表明存在恶意行为或引起怀疑。隐藏 IAT 中的 WinAPI 是可能的，将在后面的模块中讨论。</p>
-<p>下图显示了使用 Windows API 进行 AES 加密的二进制文件的 IAT。<code>bcrypt.dll</code> 库和加密函数的使用清晰可见。</p>
-<p><img alt="image" src="../../../assets/image%201.png" /></p>
-<h2 id="tiny-aes-aes">Tiny-AES 库中的 AES 加密</h2>
-<p>本节使用了第三方加密库 <a href="https://github.com/kokke/tiny-AES-c">tiny-AES-c</a>，该库能执行 AES 加密而无需使用 WinAPI。Tiny-AES-C 是一个体积小巧的便携式库，能够用 C 语言执行 AES128/192/256 加密。</p>
-<h4 id="tiny-aes">配置 Tiny-AES</h4>
+<p><img alt="" src="../assets/Launch19/image-20241007233446156.png" /></p>
+<h3 id="bcrypt">bCrypt 库的缺点</h3>
+<p>使用上述方法实现 AES 加密的主要缺点之一是，加密 WinAPI 的使用使其在二进制文件的导入地址表 (IAT) 中可见。安全解决方案可以通过扫描 IAT 来检测加密函数的使用，这可能会表明恶意行为或引发怀疑。隐藏 IAT 中的 WinAPI 是可能的，将在后续模块中讨论。</p>
+<p>下图显示了使用 Windows API 进行 AES 加密的二进制文件的 IAT。 <code>crypt.dll</code> 库和加密函数的使用清晰可见。</p>
+<p><img alt="" src="../assets/Launch19/image-20241007233536624.png" /></p>
+<h2 id="tiny-aes-aes">使用 Tiny-AES 库的 AES</h2>
+<p>本节使用了第三方加密库 <a href="https://github.com/kokke/tiny-AES-c">tiny-AES-c</a>，该库在不使用 WinAPI 的情况下执行 AES 加密。Tiny-AES-C 是一个小型可移植库，可以在 C 中执行 AES128/192/256。</p>
+<h3 id="tiny-aes">配置 Tiny-AES</h3>
 <p>要开始使用 Tiny-AES，需要满足两个要求：</p>
 <ol>
 <li>在项目中包含 <code>aes.hpp</code> (C++) 或 <code>aes.h</code> (C)。</li>
 <li>将 <code>aes.c</code> 文件添加到项目中。</li>
 </ol>
-<h4 id="aes256">设置 AES256 标志</h4>
+<h3 id="aes256">设置 AES256 标志</h3>
 <p>默认情况下，该库使用 AES128 算法进行加密和解密。然而，可以通过启用 <code>aes.h</code> 文件中位于 <a href="https://github.com/kokke/tiny-AES-c/blob/master/aes.h#L27">AESXXX 标志</a> 之一并注释掉其他标志来设置库以使用 AES256 或 AES192 算法。例如，启用 <code>AES256</code> 标志将强制库使用 AES256 算法，该算法是本模块中使用的算法。因此，<code>aes.h</code> 中的标志应如下所示：</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">//#define AES128 1</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">//#define AES192 1</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="cp">#define AES256 1</span>
 </span></code></pre></div>
-<h4 id="tiny-aes_1">Tiny-AES库的缺点</h4>
-<p>在深入了解代码之前，了解 Tiny-AES 库的缺点非常重要。</p>
+<h3 id="tiny-aes_1">Tiny-AES库的缺点</h3>
+<p>在深入代码之前，了解 tiny-AES 库的缺点是很重要的。</p>
 <ol>
 <li>该库不支持填充。所有缓冲区必须是 16 字节的倍数。</li>
-<li>该库中使用的<a href="https://github.com/kokke/tiny-AES-c/blob/master/aes.c#L79">数组</a> 可以被安全解决方案签名，以检测 Tiny-AES 的使用。这些数组用于应用 AES 算法，因此是代码中必需的。话虽如此，有办法修改它们的签名，以避免安全解决方案检测到 Tiny-AES 的使用。一种可能的解决方案是 XOR 这些数组，例如在调用初始化函数 <code>AES_init_ctx_iv</code> 之前在运行时对其进行解密。</li>
+<li>库中使用的<a href="https://github.com/kokke/tiny-AES-c/blob/master/aes.c#L79">数组</a>可以通过安全解决方案进行签名，以检测对 Tiny-AES 的使用。这些数组用于应用 AES 算法，因此在代码中是必需的。话虽如此，有一些方法可以修改它们的签名，以避免安全解决方案检测到对 Tiny-AES 的使用。一种可能的解决方案是对这些数组进行异或，例如，在调用初始化函数 <code>AES_init_ctx_iv</code> 之前，在运行时解密它们。</li>
 </ol>
-<h4 id="_3">自定义填充函数</h4>
-<p>通过创建自定义填充函数（如下面代码片段所示），可以解决缺乏填充支持的问题。</p>
+<h3 id="_5">自定义填充函数</h3>
+<p>要解决缺少填充支持的问题，可以通过创建自定义填充函数（如下面代码片段所示）。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">BOOL</span><span class="w"> </span><span class="nf">PaddBuffer</span><span class="p">(</span><span class="n">IN</span><span class="w"> </span><span class="n">PBYTE</span><span class="w"> </span><span class="n">InputBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">IN</span><span class="w"> </span><span class="n">SIZE_T</span><span class="w"> </span><span class="n">InputBufferSize</span><span class="p">,</span><span class="w"> </span><span class="n">OUT</span><span class="w"> </span><span class="n">PBYTE</span><span class="o">*</span><span class="w"> </span><span class="n">OutputPaddedBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">OUT</span><span class="w"> </span><span class="n">SIZE_T</span><span class="o">*</span><span class="w"> </span><span class="n">OutputPaddedSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">PBYTE</span><span class="w">   </span><span class="n">PaddedBuffer</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
@@ -3272,8 +3314,8 @@
 </span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
 </span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="tiny-aes_2">Tiny-AES 加密</h4>
-<p>与本模块前面介绍的 bCrypt 库的加密和解密过程相似，下面的代码段解释了 Tiny-AES 的加密和解密过程。</p>
+<h3 id="tiny-aes_2">Tiny-AES 加密</h3>
+<p>与模块中之前解释的 bCrypt 库的加密和解密过程类似，下面的代码片段解释了 Tiny-AES 的加密和解密过程。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;aes.h&quot;</span>
@@ -3336,7 +3378,7 @@
 </span><span id="__span-11-60"><a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-11-61"><a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="tiny-aes_3">Tiny-AES 解密</h4>
+<h3 id="tiny-aes_3">Tiny-AES 解密</h3>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;aes.h&quot;</span>
@@ -3383,18 +3425,12 @@
 </span><span id="__span-12-44"><a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="tiny-aes-iat">Tiny-AES IAT</h3>
-<p>下图展示了一个使用 Tiny-AES 而非 WinAPI 来执行加密的二进制文件 IAT。该二进制文件 IAT 中没有任何可见的加密功能。</p>
+<p>下面的图像显示了一个二进制文件的 IAT，该文件使用 Tiny-AES 进行加密，而不是 WinAPI。在该二进制文件的 IAT 中没有可见的加密函数。</p>
 <p><img alt="image" src="../../../assets/image-1%201.png" /></p>
-<h3 id="_4">总结</h3>
-<p>本模块讲解了 AES 的基本知识，并提供了两个可用的 AES 实现。同时，还应该了解安全解决方案将如何检测加密库的使用。</p>
-<h3 id="_5">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 了解 AES 加密的工作原理</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 查看提供的代码</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 编译并运行代码来加密和解密您的 shellcode</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 使用 Windows API 对您的 shellcode 执行 AES 加密</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 使用 Tiny-AES 库对您的 shellcode 执行 AES 加密</li>
-</ul>
+<h3 id="_6">总结</h3>
+<p>本模块解释了 AES 的基础知识，并提供了两个可工作的 AES 实现。人们还应了解安全解决方案如何检测加密库的使用。</p>
+<hr />
+<p><a class="md-button" href="../assets/Launch19/19.Aes.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
 
 

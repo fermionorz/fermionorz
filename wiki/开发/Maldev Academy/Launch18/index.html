@@ -993,7 +993,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1014,7 +1014,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1035,7 +1035,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -1140,6 +1140,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rc4-1" class="md-nav__link">
     <span class="md-ellipsis">
       RC4 加密方法 1
@@ -1203,7 +1212,7 @@
           <li class="md-nav__item">
   <a href="#systemfunction032_1" class="md-nav__link">
     <span class="md-ellipsis">
-      获取 SystemFunction032 地址
+      检索 SystemFunction032 的地址
     </span>
   </a>
   
@@ -1234,7 +1243,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       加密/解密密钥格式
     </span>
@@ -2484,6 +2493,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rc4-1" class="md-nav__link">
     <span class="md-ellipsis">
       RC4 加密方法 1
@@ -2547,7 +2565,7 @@
           <li class="md-nav__item">
   <a href="#systemfunction032_1" class="md-nav__link">
     <span class="md-ellipsis">
-      获取 SystemFunction032 地址
+      检索 SystemFunction032 的地址
     </span>
   </a>
   
@@ -2578,7 +2596,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       加密/解密密钥格式
     </span>
@@ -2607,16 +2625,21 @@
 
 
 <h1 id="18-payload-rc4"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 18 - Payload 加密 - RC4</h1>
+<details class="question">
+<summary>目标</summary>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 了解 RC4 加密的工作原理</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 查看三种 RC4 方法的代码</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 编译并运行代码来加密和解密您的 shellcode</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 使用 SystemFunction032 或 SystemFunction033 实现 RC4 加密</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 了解 RC4 加密的工作原理</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 查看三种 RC4 方法的代码</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 编译并运行代码来加密和解密您的 shellcode</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 SystemFunction032 或 SystemFunction033 实现 RC4 加密</li>
 </ul>
-<p>RC4 是一种速度快且高效的流密码，它也是一种双向加密算法，可以使用同一个函数进行加密和解密。市面上有许多 RC4 的 C 语言实现，但本模块将演示三种执行 RC4 加密的方法。</p>
-<p>请注意，本模块的目的不是深入探讨 RC4 算法的工作原理，也不需要完全深入理解它。相反，目标是加密有效载荷以规避检测。</p>
-<h3 id="rc4-1">RC4 加密方法 1</h3>
-<p>该方法使用在 <a href="https://www.oryx-embedded.com/doc/rc4_8c_source.html">此处</a> 找到的 RC4 实现，因为该实现稳定且代码编写良好。共有两个函数 <code>rc4Init</code> 和 <code>rc4Cipher</code>，它们分别用于初始化 <code>rc4context</code> 结构并执行 RC4 加密。</p>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p>RC4 是一种快速高效的流密码，也是双向加密算法，允许使用相同的功能进行加密和解密。有几个公开可用的 RC4 的 C 语言实现，但这个模块将演示三种执行 RC4 加密的方法。</p>
+<p>请注意，深入了解 RC4 算法的工作原理并不是本模块的目标，也不需要完全深入理解。相反，目标是加密有效负载以避免检测。</p>
+<h2 id="rc4-1">RC4 加密方法 1</h2>
+<p>该方法使用在 <a href="https://www.oryx-embedded.com/doc/rc4_8c_source.html">此处</a> 找到的 RC4 实现，因为它稳定且代码写得很好。有两个函数 <code>rc4Init</code> 和 <code>rc4Cipher</code> ，分别用于初始化 <code>rc4context</code> 结构和执行 RC4 加密。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
@@ -2712,8 +2735,8 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// ciphertext - 用来存储加密后数据的缓冲区</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">rc4Cipher</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">plaintext</span><span class="p">,</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">plaintext</span><span class="p">));</span>
 </span></code></pre></div>
-<h4 id="rc4_1">RC4 解密</h4>
-<p>以下代码演示了如何使用 <code>rc4Init</code> 和 <code>rc4Cipher</code> 函数来解密有效负载：</p>
+<h3 id="rc4_1">RC4 解密</h3>
+<p>下面的代码演示了如何使用 <code>rc4Init</code> 和 <code>rc4Cipher</code> 函数解密有效负载。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="c1">// 初始化</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">Rc4Context</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
@@ -2726,18 +2749,18 @@
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">// plaintext - 用于存储输出的明文数据的缓冲区</span>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">rc4Cipher</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="n">plaintext</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">));</span>
 </span></code></pre></div>
-<h3 id="rc4-2">RC4 加密 - 方法 2</h3>
+<h2 id="rc4-2">RC4 加密 - 方法 2</h2>
 <p>未记录在案的 Windows NTAPI <code>SystemFunction032</code> 提供了 RC4 算法的一种更快、更小的实现。有关此 API 的更多信息，请参阅<a href="https://source.winehq.org/WineAPI/SystemFunction032.html">此 Wine API 页面</a>。</p>
-<h4 id="systemfunction032">SystemFunction032</h4>
-<p>文档页面声明函数 <code>SystemFunction032</code> 接受两个 <code>USTRING</code> 类型的参数。</p>
+<h3 id="systemfunction032">SystemFunction032</h3>
+<p>文档页面说明该函数 <code>SystemFunction032</code> 接受两个类型为 <code>USTRING</code> 的参数。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">SystemFunction032</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">ustring</span><span class="o">*</span><span class="w">       </span><span class="n">data</span><span class="p">,</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ustring</span><span class="o">*</span><span class="w"> </span><span class="n">key</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w"> </span><span class="p">)</span>
 </span></code></pre></div>
-<h4 id="ustring">USTRING 结构</h4>
-<p>很遗憾，由于这是个未公开文档的 API，<code>USTRING</code> 的结构未知。但是，通过其他研究，可以在 <a href="https://github.com/wine-mirror/wine/blob/master/dlls/advapi32/crypt.h#L94">wine/crypt.h</a> 中找到 <code>USTRING</code> 结构定义。结构如下所示。有关此结构的更深入信息，请访问 <a href="https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/shared/ntdef/unicode_string.htm">Geoff Chappell</a>。</p>
+<h3 id="ustring">USTRING 结构</h3>
+<p>很遗憾，由于这是一个未经记录的 API， <code>USTRING</code> 的结构未知。但通过进一步的研究，可以在 <a href="https://github.com/wine-mirror/wine/blob/master/dlls/advapi32/crypt.h#L94">wine/crypt.h</a> 中找到 <code>USTRING</code> 结构定义，如下所示。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">DWORD</span><span class="w">   </span><span class="n">Length</span><span class="p">;</span><span class="w">         </span><span class="c1">// 要加密/解密的数据的大小</span>
@@ -2746,20 +2769,21 @@
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span><span class="w"> </span><span class="n">USTRING</span><span class="p">;</span>
 </span></code></pre></div>
-<p>在了解到 <code>USTRING</code> 结构后，就可以使用 <code>SystemFunction032</code> 函数了。</p>
-<h4 id="systemfunction032_1">获取 SystemFunction032 地址</h4>
-<p>要使用 <code>SystemFunction032</code>，必须先检索其地址。由于 <code>SystemFunction032</code> 是从 <code>advapi32.dll</code> 导出的，因此必须使用 <code>LoadLibrary</code> 将 DLL 加载到进程中。该函数调用的返回值可直接用于 <code>GetProcAddress</code>。</p>
-<p>一旦成功检索到 <code>SystemFunction032</code> 地址，就应该将其类型转换为与 <a href="https://source.winehq.org/WineAPI/SystemFunction032.html">Wine API 页面</a> 上引用的定义匹配的函数指针。但是，可以从 <code>GetProcAddress</code> 直接转换返回的地址。所有这些都展示在下方的代码段中。</p>
+<p>有关此结构的更深入信息，请访问 <a href="https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/shared/ntdef/unicode_string.htm">Geoff Chappell</a>。</p>
+<p>现在已知 <code>USTRING</code> 结构体，可以使用 <code>SystemFunction032</code> 函数。</p>
+<h3 id="systemfunction032_1">检索 SystemFunction032 的地址</h3>
+<p>要使用 <code>SystemFunction032</code> ，必须先获取其地址。由于 <code>SystemFunction032</code> 是从 <code>advapi32.dll</code> 导出的，因此必须使用 <code>LoadLibrary</code> 将 DLL 加载到进程中。函数调用的返回值可以直接用于 <code>GetProcAddress</code> 。</p>
+<p>一旦成功检索到 <code>SystemFunction032</code> 的地址，它应该被强制转换为与之前引用的 <a href="https://source.winehq.org/WineAPI/SystemFunction032.html">Wine API 页面</a> 上找到的定义匹配的函数指针。然而，返回的地址可以直接从 <code>GetProcAddress</code> 进行转换。以下代码片段演示了这一切。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">fnSystemFunction032</span><span class="w"> </span><span class="n">SystemFunction032</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">fnSystemFunction032</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&quot;Advapi32&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;SystemFunction032&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<p><code>SystemFunction032</code> 的函数指针定义为 <code>fnSystemFunction032</code> 数据类型，如下所示：</p>
+<p><code>SystemFunction032</code> 的函数指针被定义为 <code>fnSystemFunction032</code> 数据类型，如下所示。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">NTSTATUS</span><span class="p">(</span><span class="n">NTAPI</span><span class="o">*</span><span class="w"> </span><span class="n">fnSystemFunction032</span><span class="p">)(</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">USTRING</span><span class="o">*</span><span class="w"> </span><span class="n">Data</span><span class="p">,</span><span class="w">   </span><span class="c1">// 存储要加密/解密的缓冲区信息的 USTRING 类型结构</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">USTRING</span><span class="o">*</span><span class="w"> </span><span class="n">Key</span><span class="w">      </span><span class="c1">// 存储加密/解密期间使用的密钥信息的 USTRING 类型结构</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">);</span>
 </span></code></pre></div>
-<h4 id="systemfunction032_2">SystemFunction032 用法</h4>
-<p>以下代码片段提供了通过 <code>SystemFunction032</code> 函数执行 RC4 加密和解密的工作代码示例：</p>
+<h3 id="systemfunction032_2">SystemFunction032 用法</h3>
+<p>下面的代码片段提供了一个示例，利用 <code>SystemFunction032</code> 函数进行 RC4 加密和解密。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">DWORD</span><span class="w">   </span><span class="n">Length</span><span class="p">;</span><span class="w">      </span><span class="c1">// 长度</span>
@@ -2805,8 +2829,8 @@
 </span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
 </span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="rc4-3">RC4 加密 - 方法 3</h3>
-<p>实现 RC4 算法的另一种方法是使用 <code>SystemFunction033</code> 函数，它与之前展示的 <code>SystemFunction032</code> 函数采用相同的参数。</p>
+<h2 id="rc4-3">RC4 加密 - 方法 3</h2>
+<p>另一种实现 RC4 算法的方法是使用 <code>SystemFunction033</code> ，它接受与之前展示的 <code>SystemFunction032</code> 函数相同的参数。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">DWORD</span><span class="w">   </span><span class="n">Length</span><span class="p">;</span>
@@ -2855,9 +2879,9 @@
 </span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span>
 </span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="_1">加密/解密密钥格式</h4>
-<p>本模块和其他加密模块中的代码片段都使用一种有效的方法来表示加密/解密密钥。但是，密钥可以用多种不同的方式表示，这一点很重要。</p>
-<p>请注意，将明文密钥硬编码到二进制文件中被认为是一种不良做法，并且在分析恶意软件时很容易被提取出来。未来的模块将提供解决方案，以确保无法轻松获取密钥。</p>
+<h3 id="_2">加密/解密密钥格式</h3>
+<p>该模块及其他加密模块中的代码片段使用了一种有效的表示加密/解密密钥的方式。然而，重要的是要意识到，密钥可以使用几种不同的方式表示。</p>
+<p>注意，将明文密钥硬编码到二进制文件中被视为不良实践，并且在分析恶意软件时很容易被提取。未来的模块将提供解决方案，以确保密钥无法轻易检索。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// 方法 1</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;maldev123&quot;</span><span class="p">;</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
@@ -2877,6 +2901,8 @@
 </span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="sc">&#39;m&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;2&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;3&#39;</span>
 </span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">};</span>
 </span></code></pre></div>
+<hr />
+<p><a class="md-button" href="../assets/Launch18/18.Rc4.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
 
 

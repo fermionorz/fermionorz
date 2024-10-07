@@ -22,7 +22,7 @@
     
     
       
-        <title>🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分 - Wiki</title>
+        <title>🟢 模块 13 - Payload 部署 - .data 和 .rdata 段 - Wiki</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+              🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
             
           </span>
         </div>
@@ -1002,7 +1002,7 @@
           
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1013,7 +1013,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1035,9 +1035,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data" class="md-nav__link">
     <span class="md-ellipsis">
-      .data 节
+      .data 段
     </span>
   </a>
   
@@ -1047,15 +1056,6 @@
   <a href="#rdata" class="md-nav__link">
     <span class="md-ellipsis">
       .rdata 节（段）
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
     </span>
   </a>
   
@@ -1081,7 +1081,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1102,7 +1102,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -2403,9 +2403,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data" class="md-nav__link">
     <span class="md-ellipsis">
-      .data 节
+      .data 段
     </span>
   </a>
   
@@ -2415,15 +2424,6 @@
   <a href="#rdata" class="md-nav__link">
     <span class="md-ellipsis">
       .rdata 节（段）
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
     </span>
   </a>
   
@@ -2444,26 +2444,27 @@
                   
 
 
-<h1 id="13-payload-data-rdata"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 13 - Payload 位置 - .data 和 .rdata 部分</h1>
+<h1 id="13-payload-data-rdata"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 13 - Payload 部署 - .data 和 .rdata 段</h1>
 <details class="question">
 <summary>目标</summary>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 熟悉模块布局</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 与模块中不同的按钮进行交互</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 理解 .data 和 .rdata 段之间的区别</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 在包含有效载荷的 .rdata 节的二进制文件上运行 dumpbin.exe 并找到有效载荷。</li>
 </ul>
 </details>
 <hr />
-<p>作为恶意软件开发人员，您可以在 PE 文件中存储有效载荷，可选择的位置有很多。根据您的选择，有效载荷将驻留在 PE 文件中的不同部分。有效载荷可以存储在以下 PE 部分之一中：</p>
+<h2 id="_1">介绍</h2>
+<p>作为恶意软件开发人员，您可以在 PE 文件中存储有效载荷，可选择的位置有很多。根据您的选择，有效载荷将驻留在 PE 文件中的不同部分。有效载荷可以存储在以下 PE 段之中：</p>
 <ul>
 <li><code>.data</code></li>
 <li><code>.rdata</code></li>
 <li><code>.text</code></li>
 <li><code>.rsrc</code></li>
 </ul>
-<p>此模块演示如何在 <code>.data</code> 和 <code>.rdata</code> PE 部分中存储有效载荷。</p>
-<h3 id="data">.data 节</h3>
-<p>PE 文件的 <code>.data</code> 节是 PE 文件的可执行部分中包含已初始化全局变量和静态变量的部分。此节可读写，适合需要在运行时解密的加密有效负载。有效负载如果是全局或局部变量，将存储在 <code>.data</code> 节中，具体取决于编译器设置。</p>
-<p>以下代码片段展示了将有效负载存储在 <code>.data</code> 节中的示例。</p>
+<p>该模块演示了如何将有效载荷存储在 <code>.data</code> 和 <code>.rdata</code> PE 段中。</p>
+<h2 id="data">.data 段</h2>
+<p>PE 文件的 <code>.data</code> 段是程序可执行文件的一部分，包含已初始化的全局和静态变量。该部分可读可写，适合需要在运行时解密的加密有效载荷。如果有效载荷是全局或局部变量，则它将根据编译器设置存储在 <code>.data</code> 段。</p>
+<p>下面的代码片段展示了将有效载荷存储在 <code>.data</code> 部分的示例。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -2507,13 +2508,13 @@
 <p>上图显示了 xdbg 中上述代码片段的输出。请注意图片中的几点：</p>
 <ol>
 <li><code>.data</code> 节起始于地址 <code>0x00007FF7B7603000</code>。</li>
-<li><code>Data_RawData</code> 的基地址为 <code>0x00007FF7B7603040</code>，这是 <code>RW</code> 内存保护，指的是可读写区域。</li>
-<li>从 <code>.data</code> 节偏移了 <code>0x40</code>。</li>
+<li><code>Data_RawData</code> 的基地址是 <code>0x00007FF7B7603040</code> ，这是 .data 节的偏移量 <code>0x40</code> 。</li>
+<li>注意该区域的内存保护被指定为 <code>RW</code> ，这表示它是一个读写区域。</li>
 </ol>
-<p><img alt="image" src="../../../assets/image-17.png" /></p>
-<h3 id="rdata">.rdata 节（段）</h3>
-<p>使用 <code>const</code> 限定符指定的变量被写为常量。这类变量被认为是“只读”数据。<code>.rdata</code> 中的字母 “r” 表示此含义，任何尝试更改这些变量的行为都会导致访问冲突。此外，根据编译器及其设置，<code>.data</code> 和 <code>.rdata</code> 节（段）可能会被合并，甚至被合并到 <code>.text</code> 节中。</p>
-<p>下面的代码片段展示了一个存储在 <code>.rdata</code> 节（段）中的有效载荷示例。代码本质上与之前的代码片段相同，除了现在该变量之前增加了 <code>const</code> 限定符。</p>
+<p><img alt="" src="../assets/Launch13/image-20241007225633015.png" /></p>
+<h2 id="rdata">.rdata 节（段）</h2>
+<p>使用 <code>const</code> 限定符指定的变量被写为常量。这些类型的变量被认为是“只读”数据。 <code>.rdata</code> 中的字母 "r" 表明这一点，任何尝试更改这些变量的行为都会导致访问违规。此外，具体取决于编译器及其设置， <code>.data</code> 和 <code>.rdata</code> 部分可能会被合并，甚至合并到 <code>.text</code> 部分。</p>
+<p>下面的代码片段显示了将有效负载存储在 <code>.rdata</code> 部分的示例。该代码本质上与之前的代码片段相同，只是变量现在前面加上了 <code>const</code> 修饰符。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -2554,22 +2555,12 @@
 </span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>下图显示了针对 PE 文件运行 <a href="https://learn.microsoft.com/en-us/cpp/build/reference/dumpbin-reference?view=msvc-170">dumpbin.exeopen in new window</a> 的输出。安装 Visual Studio 的 C++ 运行时将自动下载 dumpbin.exe。</p>
+<p>下图显示了针对 PE 文件运行 <a href="https://learn.microsoft.com/en-us/cpp/build/reference/dumpbin-reference?view=msvc-170">dumpbin.exe</a> 的输出。安装 Visual Studio 的 C++ 运行时将自动下载 dumpbin.exe。</p>
 <p>命令：<code>dumpbin.exe /ALL &lt;二进制文件.exe&gt;</code></p>
 <p>向下滚动并查看 <code>.rdata</code> 节的详细信息，其中包含以其原始二进制格式存储的数据。</p>
-<p><img alt="图像" src="../../../assets/%E5%9B%BE%E5%83%8F-2.png" /></p>
+<p><img alt="" src="../assets/Launch13/image-20241007225745408.png" /></p>
 <p>向下滚动得更多，可以看到下图中突出显示的已分配有效载荷。</p>
-<p><img alt="image" src="../../../assets/image-18.png" /></p>
-<h3 id="_1">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 了解 .data 和 .rdata 部分之间的区别</li>
-</ul>
-<p>.rdata 段存储只读常量 'r'</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 在 Payload 位于 .rdata 部分的二进制文件上运行 dumpbin.exe，并找到 Payload。</li>
-</ul>
-<p><code>dumpbin.exe /ALL payload.exe</code></p>
-<p><img alt="" src="../../../assets/Pasted%20image%2020240802085247.png" /></p>
+<p><img alt="" src="../assets/Launch13/image-20241007225751395.png" /></p>
 <hr />
 <p><a class="md-button" href="../assets/Launch13/13-DataPayloadPlacement.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
@@ -2626,13 +2617,13 @@
         
         
           
-          <a href="../Launch14/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 14 - Payload 位置 - .text 段">
+          <a href="../Launch14/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 14 - Payload 部署 - .text 段">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                🟢 模块 14 - Payload 位置 - .text 段
+                🟢 模块 14 - Payload 部署 - .text 段
               </div>
             </div>
             <div class="md-footer__button md-icon">

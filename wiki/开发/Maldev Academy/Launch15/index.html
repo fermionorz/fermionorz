@@ -22,7 +22,7 @@
     
     
       
-        <title>🟢 模块 15 - Payload 位置 - .rsrc 段 - Wiki</title>
+        <title>🟢 模块 15 - Payload 部署 - .rsrc 段 - Wiki</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🟢 模块 15 - Payload 位置 - .rsrc 段
+              🟢 模块 15 - Payload 部署 - .rsrc 段
             
           </span>
         </div>
@@ -993,7 +993,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1014,7 +1014,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1044,7 +1044,7 @@
           
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -1055,7 +1055,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -1077,6 +1077,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rsrc" class="md-nav__link">
     <span class="md-ellipsis">
       .rsrc 节
@@ -1086,18 +1095,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rsrc_1" class="md-nav__link">
+  <a href="#rsrc-payload" class="md-nav__link">
     <span class="md-ellipsis">
-      更新 .rsrc 有效负载
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
+      更新 .rsrc 段的 Payload
     </span>
   </a>
   
@@ -2403,6 +2403,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rsrc" class="md-nav__link">
     <span class="md-ellipsis">
       .rsrc 节
@@ -2412,18 +2421,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rsrc_1" class="md-nav__link">
+  <a href="#rsrc-payload" class="md-nav__link">
     <span class="md-ellipsis">
-      更新 .rsrc 有效负载
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
+      更新 .rsrc 段的 Payload
     </span>
   </a>
   
@@ -2444,50 +2444,58 @@
                   
 
 
-<h1 id="15-payload-rsrc"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 15 - Payload 位置 - .rsrc 段</h1>
-<p>将有效负载保存在 <code>.rsrc</code> 段是一种更简洁的方法，因为较大的有效负载无法存储在 <code>.data</code> 或 <code>.rdata</code> 段中，因为存在大小限制，从而导致编译期间 Visual Studio 报错。</p>
-<h3 id="rsrc">.rsrc 节</h3>
-<p>以下步骤说明了如何在 <code>.rsrc</code> 节中存储有效负载：</p>
-<ol>
-<li>在 Visual Studio 中，右键单击“资源文件”，然后单击添加 &gt; 新建项。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-23.png" /></p>
-<ol>
-<li>单击“资源文件”。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-19.png" /></p>
-<ol>
-<li>这将生成一个新的侧边栏，即资源视图。右键单击 .rc 文件（Resource.rc 是默认名称），然后选择“添加资源”选项。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-21.png" /></p>
-<ol>
-<li>单击“导入”。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-24.png" /></p>
-<ol>
-<li>选择 calc.ico 文件，该文件是重命名为 <code>.ico</code> 扩展名的原始有效负载。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-20.png" /></p>
-<ol>
-<li>将出现一个提示，要求输入资源类型。输入“RCDATA”，不带引号。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-22.png" /></p>
-<ol>
-<li>单击“确定”后，有效负载应以原始二进制格式显示在 Visual Studio 项目中</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-29.png" /></p>
-<ol>
-<li>退出“资源视图”时，应显示“resource.h”头文件，并根据步骤 2 中的 .rc 文件进行命名。此文件包含一个定义语句，引用资源部分 (IDR_RCDATA1) 中有效负载的 ID。这很重要，以便能够以后从资源部分中检索有效负载。</li>
-</ol>
-<p><img alt="image" src="../../../assets/image-26.png" /></p>
-<p>编译后，有效负载将存储在 <code>.rsrc</code> 节中，但无法直接访问。相反，必须使用多个 WinAPI 来访问它。</p>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a> - 获取存储在资源部分的指定数据的位置（由头文件中定义）</li>
-<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a> - 检索资源数据的 <code>HGLOBAL</code> 句柄。此句柄可用于获取内存中指定资源的基础地址。</li>
-<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource">LockResource</a> - 从其句柄中获取资源部分中指定数据的指针。</li>
-<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-sizeofresource">SizeofResource</a> - 获取资源部分中指定数据的尺寸。</li>
+<h1 id="15-payload-rsrc"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 15 - Payload 部署 - .rsrc 段</h1>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 按照模块中的步骤，在资源部分存储有效载荷</li>
 </ul>
-<p>以下代码段将利用上述 Windows API 来访问 <code>.rsrc</code> 部分并获取有效负载地址和尺寸。</p>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p>将有效负载保存在 <code>.rsrc</code> 部分是最佳选择之一，因为大多数实际的二进制文件都会在此处保存其数据。这对于恶意软件作者来说也是一种更清晰的方法，因为较大的有效负载无法存储在 <code>.data</code> 或 <code>.rdata</code> 部分，由于大小限制，这会导致在编译期间 Visual Studio 出现错误。</p>
+<h2 id="rsrc">.rsrc 节</h2>
+<p>以下步骤说明如何在 <code>.rsrc</code> 部分存储有效载荷。</p>
+<ol>
+<li>在 Visual Studio 中，右键单击“资源文件”，然后单击添加 &gt; 新项。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230500449.png" /></p>
+<ol>
+<li>点击“资源文件”。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230515486.png" /></p>
+<ol>
+<li>这将生成一个新的侧边栏，即资源视图。右键单击 .rc 文件（Resource.rc 是默认名称），并选择“添加资源”选项。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230527494.png" /></p>
+<ol>
+<li>点击“导入”。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230539111.png" /></p>
+<ol>
+<li>选择 calc.ico 文件，这是重命名为 <code>.ico</code> 扩展名的原始有效负载。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230550138.png" /></p>
+<ol>
+<li>会出现一个提示，要求输入资源类型。输入 "RCDATA"（不带引号）。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230600534.png" /></p>
+<ol>
+<li>点击确定后，有效载荷应以原始二进制格式显示在 Visual Studio 项目中。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230610410.png" /></p>
+<ol>
+<li>当退出资源视图时，应该可以看到“resource.h”头文件，并根据第 2 步中的.rc 文件命名。该文件包含一个定义语句，引用资源部分中的有效载荷 ID（IDR_RCDATA1）。这是为了能够在后续从资源部分检索有效载荷而重要的。</li>
+</ol>
+<p><img alt="" src="../assets/Launch15/image-20241007230625846.png" /></p>
+<p>一旦编译，负载将存储在 <code>.rsrc</code> 部分，但无法直接访问。相反，必须使用多个 WinAPI 来访问它。</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a> - 获取特定 ID 传递的资源部分中存储的指定数据的位置（这在头文件中定义）</li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a> - 检索资源数据的 <code>HGLOBAL</code> 句柄。此句柄可用于获取指定资源在内存中的基地址。</li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource">LockResource</a> - 从其句柄中获取指向资源部分中指定数据的指针。</li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-sizeofresource">SizeofResource</a> - 获取资源部分中指定数据的大小。</li>
+</ul>
+<p>以下代码片段将利用上述 Windows API 访问 <code>.rsrc</code> 部分并获取有效负载地址和大小。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;resource.h&quot;</span>
@@ -2539,9 +2547,9 @@
 </span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>编译并运行上述代码后，有效负载地址及其尺寸将打印到屏幕上。需要注意的是，此地址位于 <code>.rsrc</code> 部分，该部分为只读内存，任何尝试更改或编辑其中数据的行为都将导致访问冲突错误。要编辑有效负载，必须分配一个尺寸与有效负载相同的缓冲区，并将其复制过去。可以在此新缓冲区中进行解密有效负载等更改。</p>
-<h3 id="rsrc_1">更新 .rsrc 有效负载</h3>
-<p>由于有效负载无法直接从资源部分编辑，因此必须将其移动到一个临时缓冲区。为此，使用 <a href="https://learn.microsoft.com/en-us/windows/win32/api/heapapi/nf-heapapi-heapalloc">HeapAlloc</a> 分配有效负载大小的内存，然后使用 <code>memcpy</code> 将有效负载从资源部分移动到临时缓冲区。</p>
+<p>在编译和运行上述代码后，有效负载地址及其大小将打印到屏幕上。重要的是要注意，这个地址位于 <code>.rsrc</code> 节中，该节是只读内存，任何尝试更改或编辑其中数据的操作都会导致访问冲突错误。要编辑有效负载，必须分配一个与有效负载大小相同的缓冲区并进行复制。这个新缓冲区就是可以进行更改（如解密有效负载）的地方。</p>
+<h2 id="rsrc-payload">更新 .rsrc 段的 Payload</h2>
+<p>由于有效负载无法直接从资源部分编辑，因此必须将其移动到一个临时缓冲区。为此，使用 <a href="https://learn.microsoft.com/en-us/windows/win32/api/heapapi/nf-heapapi-heapalloc">HeapAlloc</a> 分配 Payload 大小的内存，然后使用 <code>memcpy</code> 将有效负载从资源部分移动到临时缓冲区。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// 使用 HeapAlloc 调用分配内存</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">PVOID</span><span class="w"> </span><span class="n">pTmpBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HeapAlloc</span><span class="p">(</span><span class="n">GetProcessHeap</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">sPayloadSize</span><span class="p">);</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pTmpBuffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2552,15 +2560,13 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">// 打印缓冲区 (pTmpBuffer) 的基址</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[i] pTmpBuffer var : 0x%p </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pTmpBuffer</span><span class="p">);</span>
 </span></code></pre></div>
-<p>由于 <code>pTmpBuffer</code> 现在指向一个保存有效负载的可写内存区域，因此可以解密有效负载或对其执行任何更新操作。</p>
-<p>下图显示了 Msfvenom shellcode 存储在资源部分中。</p>
-<p><img alt="image" src="../../../assets/image-27.png" /></p>
-<p>继续执行，有效负载被保存在临时缓冲区中。</p>
-<p><img alt="image" src="../../../assets/image-28.png" /></p>
-<h3 id="_1">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 按照模块中的步骤操作，并在资源部分内存储有效负载</li>
-</ul>
+<p>由于 <code>pTmpBuffer</code> 现在指向一个可写的内存区域，该区域保存着有效负载，因此可以解密有效负载或对其进行任何更新。</p>
+<p>下图显示了存储在资源部分的 Msfvenom shellcode。</p>
+<p><img alt="" src="../assets/Launch15/image-20241007230851715.png" /></p>
+<p>执行过程中，有效负载被保存在临时缓冲区中。</p>
+<p><img alt="" src="../assets/Launch15/image-20241007230901569.png" /></p>
+<hr />
+<p><a class="md-button" href="../assets/Launch15/15.ResourcePayloadPlacement.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
 
 
@@ -2598,7 +2604,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../Launch14/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 🟢 模块 14 - Payload 位置 - .text 段">
+          <a href="../Launch14/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 🟢 模块 14 - Payload 部署 - .text 段">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2608,7 +2614,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                🟢 模块 14 - Payload 位置 - .text 段
+                🟢 模块 14 - Payload 部署 - .text 段
               </div>
             </div>
           </a>

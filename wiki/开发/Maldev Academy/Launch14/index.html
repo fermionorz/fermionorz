@@ -22,7 +22,7 @@
     
     
       
-        <title>🟢 模块 14 - Payload 位置 - .text 段 - Wiki</title>
+        <title>🟢 模块 14 - Payload 部署 - .text 段 - Wiki</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🟢 模块 14 - Payload 位置 - .text 段
+              🟢 模块 14 - Payload 部署 - .text 段
             
           </span>
         </div>
@@ -993,7 +993,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1023,7 +1023,7 @@
           
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1034,7 +1034,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1056,18 +1056,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#text" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      .text 节
+      介绍
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#text" class="md-nav__link">
     <span class="md-ellipsis">
-      目标
+      .text 段
     </span>
   </a>
   
@@ -1093,7 +1093,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -2394,18 +2394,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#text" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      .text 节
+      介绍
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#text" class="md-nav__link">
     <span class="md-ellipsis">
-      目标
+      .text 段
     </span>
   </a>
   
@@ -2426,10 +2426,19 @@
                   
 
 
-<h1 id="14-payload-text"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 14 - Payload 位置 - .text 段</h1>
-<p>前面的模块介绍了怎样将有效载荷存储到 <code>.data</code> 和 <code>.rdata</code> 段中，而本模块讲解怎样将有效载荷存储到 <code>.text</code> 段中。</p>
-<h3 id="text">.text 节</h3>
-<p>将变量保存在 <code>.text</code> 节与保存在 <code>.data</code> 或 <code>.rdata</code> 节中不同，因为它不仅仅是要声明某个随机变量。相反，需要按照以下代码片段中的方式指导编译器将它保存在 <code>.text</code> 节中。</p>
+<h1 id="14-payload-text"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 14 - Payload 部署 - .text 段</h1>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 在.text 段中保存有效负载</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 PE-Bear 检查编译后的二进制文件的 .text 段并定位有效负载</li>
+</ul>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p>前一个模块讨论了在 <code>.data</code> 和 <code>.rdata</code> 部分存储有效载荷，而本模块涵盖在 <code>.text</code> 部分存储有效载荷。</p>
+<h2 id="text">.text 段</h2>
+<p>在 <code>.text</code> 部分保存变量与在 <code>.data</code> 或 <code>.rdata</code> 部分保存变量有所不同，因为这不仅仅是声明一个随机变量的问题。相反，必须指示编译器将其保存到 <code>.text</code> 部分，下面的代码片段演示了这一点。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -2471,15 +2480,11 @@
 </span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>这里告诉编译器将 <code>Text_rawData</code> 变量放在 <code>.text</code> 节中，而不是 <code>.rdata</code> 节中。<code>.text</code> 节是特殊的，因为它存储具有可执行内存权限的变量，允许它们直接执行，而无需编辑内存区域权限。这对于大约小于 10 个字节的小型负载很有用。</p>
-<p>使用 PE-Bear 工具检查由上述代码片段编译的二进制文件，可以发现负载位于 <code>.text</code> 区域。</p>
-<p><img alt="image" src="../../../assets/image-25.png" /></p>
-<h3 id="_1">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 在 .text 部分内保存 Payload</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 使用 PE-Bear 检查已编译二进制文件的 .text 部分并找到 Payload</li>
-</ul>
-<p><img alt="" src="../../../assets/Pasted%20image%2020240802091032.png" /></p>
+<p>在这里，编译器被告知将 <code>Text_rawData</code> 变量放置在 <code>.text</code> 部分，而不是 <code>.rdata</code> 部分。 <code>.text</code> 部分是特殊的，因为它存储具有可执行内存权限的变量，允许它们被直接执行，而无需编辑内存区域权限。这对于小有效载荷（大约小于 10 字节）非常有用。</p>
+<p>使用 PE-Bear 工具检查从上述代码片段编译的二进制文件显示，载荷位于 <code>.text</code> 区域。</p>
+<p><img alt="" src="../assets/Launch14/image-20241007230219365.png" /></p>
+<hr />
+<p><a class="md-button" href="../assets/Launch14/14.TextPayloadPlacement.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 17v-2h8v2zm8-7-4 4-4-4h2.5V6h3v4zm-4-8c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8"/></svg></span> 附件</a></p>
 
 
 
@@ -2517,7 +2522,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../Launch13/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分">
+          <a href="../Launch13/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 🟢 模块 13 - Payload 部署 - .data 和 .rdata 段">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2527,20 +2532,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+                🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Launch15/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 15 - Payload 位置 - .rsrc 段">
+          <a href="../Launch15/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 15 - Payload 部署 - .rsrc 段">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                🟢 模块 15 - Payload 位置 - .rsrc 段
+                🟢 模块 15 - Payload 部署 - .rsrc 段
               </div>
             </div>
             <div class="md-footer__button md-icon">

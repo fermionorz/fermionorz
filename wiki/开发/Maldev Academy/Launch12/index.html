@@ -1014,6 +1014,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#peb" class="md-nav__link">
     <span class="md-ellipsis">
       PEB 结构示例
@@ -1024,7 +1033,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       查找保留成员
     </span>
@@ -1038,29 +1047,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他文档
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      注意点
+      替代文档
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="替代文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1084,7 +1090,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+    🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
   </span>
   
 
@@ -1105,7 +1111,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 14 - Payload 位置 - .text 段
+    🟢 模块 14 - Payload 部署 - .text 段
   </span>
   
 
@@ -1126,7 +1132,7 @@
         
   
   <span class="md-ellipsis">
-    🟢 模块 15 - Payload 位置 - .rsrc 段
+    🟢 模块 15 - Payload 部署 - .rsrc 段
   </span>
   
 
@@ -2427,6 +2433,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#peb" class="md-nav__link">
     <span class="md-ellipsis">
       PEB 结构示例
@@ -2437,7 +2452,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       查找保留成员
     </span>
@@ -2451,29 +2466,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他文档
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      注意点
+      替代文档
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="替代文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目标
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2493,10 +2505,19 @@
 
 
 <h1 id="12-"><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e2.svg" title=":green_circle:" /> 模块 12 - 未记录的结构体</h1>
-<p>当阅读 Windows 文档中有关结构的信息时，可能会看到结构中有一些 <em>保留</em> 成员。这些保留成员通常以 <code>BYTE</code> 或 <code>PVOID</code> 数据类型的数组形式呈现。这是 Microsoft 为保证机密性并防止用户了解结构而避免其修改这些保留成员而采用的一种做法。</p>
-<p>话虽如此，在学习过程中，有必要了解这些未记录的成员。因此，一些模块将避免使用 Microsoft 的文档，而使用包含完整未记录结构的其他网站，这些结构可能是通过逆向工程得出的。</p>
-<h3 id="peb">PEB 结构示例</h3>
-<p>如前一模块中所述，进程环境块或 PEB 是一个数据结构，其中保存有关 Windows 进程的信息。但是，<a href="https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-peb">Microsoft 文档</a> 中有关 PEB 结构的说明显示了多个保留成员。这使得很难访问该结构的成员。</p>
+<details class="question">
+<summary>目标</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 比较微软关于 PEB 的文档与 Process Hacker 的头文件上的非官方文档</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 简要回顾模块中提供的替代文档来源</li>
+</ul>
+</details>
+<hr />
+<h2 id="_1">介绍</h2>
+<p>当引用 Windows 文档中的结构时，可能会遇到结构内的多个保留成员。这些保留成员通常以 <code>BYTE</code> 或 <code>PVOID</code> 数据类型的数组形式呈现。微软实施这种做法是为了维护机密性，并防止用户理解结构，从而避免对这些保留成员的修改。</p>
+<p>在此基础上，在整个课程中，需要处理这些未记录的成员。因此，一些模块将避免使用微软的文档，而是使用其他拥有完整未记录结构的网站，这些结构可能是通过逆向工程获取的。</p>
+<h2 id="peb">PEB 结构示例</h2>
+<p>如前面的模块中提到的，进程环境块（PEB）是一种数据结构，用于保存有关 Windows 进程的信息。然而，<a href="https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-peb">Microsoft 文档</a> 中有关 PEB 结构的说明显示了多个保留成员。这使得很难访问该结构的成员。</p>
 <div class="language-C highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_PEB</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// 保留 2 个字节</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n">BYTE</span><span class="w">                          </span><span class="n">Reserved1</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
@@ -2538,11 +2559,11 @@
 </span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="n">ULONG</span><span class="w">                         </span><span class="n">SessionId</span><span class="p">;</span>
 </span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="p">}</span><span class="w"> </span><span class="n">PEB</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">PPEB</span><span class="p">;</span>
 </span></code></pre></div>
-<h4 id="_1">查找保留成员</h4>
+<h3 id="_2">查找保留成员</h3>
 <p>确定 PEB 的保留成员所包含内容的一种方法是通过 <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools">WinDbg</a> 中的 <code>!peb</code> 命令。</p>
-<p><img alt="图片" src="../../../assets/%E5%9B%BE%E7%89%87-6%201.png" /></p>
+<p><img alt="" src="../assets/Launch12/image-20241007224114233.png" /></p>
 <p>有关更完整的 PEB 结构，请参阅 Process Hacker 的 <a href="https://github.com/winsiderss/systeminformer/blob/2c9dd8765011a85fd98774cb37ff4ef52923d8c1/phnt/include/ntpebteb.h#L83">PEB 结构</a>。</p>
-<h3 id="_2">其他文档</h3>
+<h2 id="_3">替代文档</h2>
 <p>如前所述，某些模块会避免使用 Microsoft 的文档，而改用其他文档来源。</p>
 <ul>
 <li><a href="https://github.com/winsiderss/systeminformer/tree/master/phnt/include">Process Hacker 的头文件</a></li>
@@ -2550,17 +2571,12 @@
 <li><a href="https://doxygen.reactos.org/globals_type.html">ReactOS 的文档</a></li>
 <li><a href="https://www.vergiliusproject.com/">Vergilius 项目</a> - 虽然主要针对 Windows 内核结构，但它仍然是一个宝贵的资源。</li>
 </ul>
-<h3 id="_3">注意点</h3>
+<h3 id="_4">注意事项</h3>
 <p>在选择结构定义时，务必注意以下几点：</p>
 <ul>
-<li>某些结构定义仅适用于特定架构，例如 x86 或 x64。如果确实如此，请确保选择了适当的结构定义。</li>
-<li>在某些情况下，为了嵌套结构的概念，可能需要定义多个结构。例如，如 PEB 等结构可能包含一个成员，该成员充当指向另一个结构的指针。因此，务必定义后一个结构，以确保程序正确解释它。</li>
-<li>在使用结构的自定义定义时，不可能同时包含它在 Windows SDK 中的原始定义。例如，Microsoft 对 PEB 结构的定义位于 <a href="https://learn.microsoft.com/en-us/windows/win32/api/winternl/#structures">Winternl.h</a> 中。如果您打算使用上述某一个文档源中提供的定义，那么尝试在程序中包含 <code>Winternl.h</code> 会导致 Visual Studio 编译器引发重新定义错误。为避免这种情况，请仅选择一个结构定义。</li>
-</ul>
-<h3 id="_4">目标</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 将 Microsoft 的 PEB 文档与 Process Hacker 的头文件的非官方文档进行比较</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 简要回顾模块中提供的替代文档来源</li>
+<li>某些结构定义仅适用于特定架构，即 x86 或 x64。如果是这种情况，请确保选择适当的结构定义。</li>
+<li>在某些情况下，由于嵌套结构的概念，可能需要定义多个结构。例如，PEB 这样的结构可能包含一个作为指向另一个结构的指针的成员。因此，包括后者结构的定义变得很重要，以确保程序正确解释它。</li>
+<li>当使用自定义结构定义时，无法同时包含在 Windows SDK 中找到的原始定义。例如，Microsoft 对 PEB 结构的定义位于 <a href="https://learn.microsoft.com/en-us/windows/win32/api/winternl/#structures">Winternl.h</a>。如果打算使用上述文档来源之一的不同定义，那么尝试在程序中包含 <code>Winternl.h</code> 将导致 Visual Studio 的编译器抛出重定义错误。为避免这种情况，仅选择一种结构的定义。</li>
 </ul>
 
 
@@ -2616,13 +2632,13 @@
         
         
           
-          <a href="../Launch13/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分">
+          <a href="../Launch13/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🟢 模块 13 - Payload 部署 - .data 和 .rdata 段">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                🟢 模块 13 - Payload 位置 - .data 和 .rdata 部分
+                🟢 模块 13 - Payload 部署 - .data 和 .rdata 段
               </div>
             </div>
             <div class="md-footer__button md-icon">
