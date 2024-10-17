@@ -33,7 +33,7 @@
       <link href="/blog/2024/09/29/Test/"/>
       <url>/blog/2024/09/29/Test/</url>
       
-        <content type="html"><![CDATA[<div class="info" style="display: flex; align-items: center;">    <img src="/2024/09/29/Test/"  alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">    <div class="info-text">        <span class="title" style="font-weight: bold;">Fermionorz</span>        <span class="desc" style="color: #555; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">简单描述</span>    </div></div>]]></content>
+        <content type="html"><![CDATA[<div class="info" style="display: flex; align-items: center;">    <img src="/2024/09/29/Test/"  style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">    <div class="info-text">        <span class="title" style="font-weight: bold;">Fermionorz</span>        <span class="desc" style="color: #555; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">简单描述</span>    </div></div>]]></content>
       
       
       
