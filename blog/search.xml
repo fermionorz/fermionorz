@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Windows 恶意软件开发</title>
+      <link href="/blog/2024/10/08/Windows%20%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+      <url>/blog/2024/10/08/Windows%20%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Windows 下的恶意软件一般包含以下功能</p><ul><li><input disabled="" type="checkbox"> Payload 存储、加密、混淆、执行</li><li><input disabled="" type="checkbox"> PE 信息伪造、进程信息伪造</li><li><input disabled="" type="checkbox"> 沙箱检测、虚拟环境检测</li><li><input disabled="" type="checkbox"> 反调试、杀软绕过</li><li><input disabled="" type="checkbox"> EDR 绕过</li></ul><h2 id="Payload-存储、加密、混淆、执行"><a href="#Payload-存储、加密、混淆、执行" class="headerlink" title="Payload 存储、加密、混淆、执行"></a>Payload 存储、加密、混淆、执行</h2><h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><p>目前有以下存储方式</p><ul><li>PE 文件内部<ul><li>.data .rdata 段</li><li>.text 段</li><li>.rsrc 段</li></ul></li><li>本地 Payload 分离<ul><li>可以起一个伪装的名称，config.xml、resources.pak…</li></ul></li><li>远程 Payload<ul><li><a href="https://xxx.com/favicon.ico">https://xxx.com/favicon.ico</a></li><li><a href="http://xxx.com/uploads/images/head.png">http://xxx.com/uploads/images/head.png</a></li></ul></li><li>Windows 注册表</li></ul><p>三种方法各有优劣，应根据实际应用场景进行选择。例如：</p><ul><li>在权限维持场景中，可以优先考虑 Payload 分离；</li><li>在社工钓鱼的场景中，可以优先考虑远程文件的方式，这样可以在钓鱼行动被发现后更改远程 Payload 内容；</li><li>在多层内网环境或者存在离线环境的情况下，就优先考虑在 PE 文件内部存储 Payload，这样会让蓝队不那么容易去追踪感染链。</li></ul><h4 id="PE-文件内部存储"><a href="#PE-文件内部存储" class="headerlink" title="PE 文件内部存储"></a>PE 文件内部存储</h4><ul><li><input disabled="" type="checkbox"> .data 段主要包含初始化的全局和静态变量，可读可写；.rdata 段存放常量，只读。一个较小的程序需要初始化一个较大的变量，这种行为看起来多少会有些奇怪。</li><li><input disabled="" type="checkbox"> .text 段具有可执行权限，存储在其中的数据可以直接执行，因此这个段需要接受的审查会更严格，如果 Payload 较小（小于 10 字节），那么放在此段效果会很好。</li><li><input checked="" disabled="" type="checkbox"> .rsrc 段主要放置资源文件，实际情况下大部分的二进制文件都会在此存放数据，所以 Payload 可以未造成图标或者其他文件存储在这里。</li></ul><h4 id="Payload-分离"><a href="#Payload-分离" class="headerlink" title="Payload 分离"></a>Payload 分离</h4><p>Payload 分离，需要考虑的问题就是如何伪装，可以根据普通应用程序的内容来模仿。</p><ul><li>Windows 注册表</li><li>游戏资源文件</li><li>主题文件</li><li>chm 手册</li><li>pak、v8 文件（主要是一些基于浏览器打包的应用程序）</li><li>ui 文件</li><li>dll 文件</li></ul><h4 id="远程-Payload"><a href="#远程-Payload" class="headerlink" title="远程 Payload"></a>远程 Payload</h4><p>本质上也是对 Payload 进行分离，所以需要考虑的内容也是如何伪装</p><ul><li>图标资源</li><li>API 请求</li><li>…</li></ul><h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><ul><li><input disabled="" type="checkbox"> XOR</li><li><input disabled="" type="checkbox"> RC4</li><li><input checked="" disabled="" type="checkbox"> AES</li></ul><p>XOR、RC4 加密已经无法绕过 Windows Defender 了，建议使用 AES 或者其他强加密方法。</p><h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><ul><li><input checked="" disabled="" type="checkbox"> IPv4&#x2F;IPv6</li><li><input checked="" disabled="" type="checkbox"> MAC</li><li><input checked="" disabled="" type="checkbox"> UUID</li></ul><p>三种方法可以结合应用场景进行选择。例如：Payload 分离的存储方式可以搭配 MAC 混淆，将 Payload 存储在 xml 等文件中。</p><h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><ul><li><input disabled="" type="checkbox"> 本地&#x2F;远程 DLL 加载</li><li><input disabled="" type="checkbox"> 本地&#x2F;远程进程执行</li><li><input disabled="" type="checkbox"> 本地&#x2F;远程线程创建</li><li><input disabled="" type="checkbox"> 本地&#x2F;远程线程劫持</li><li><input disabled="" type="checkbox"> APC 注入</li><li><input disabled="" type="checkbox"> 回调代码执行</li><li><input disabled="" type="checkbox"> 本地&#x2F;远程映射注入</li><li><input disabled="" type="checkbox"> 本地&#x2F;远程函数篡改</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Security </tag>
+            
+            <tag> Windows </tag>
+            
+            <tag> C </tag>
+            
+            <tag> 恶意软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人站点解决方案</title>
       <link href="/blog/2024/09/29/%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/blog/2024/09/29/%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
@@ -27,45 +52,7 @@
       <link href="/blog/2024/09/26/2024%20%E5%B9%B4%E5%86%AC%E6%97%A5%E8%AE%A1%E5%88%92/"/>
       <url>/blog/2024/09/26/2024%20%E5%B9%B4%E5%86%AC%E6%97%A5%E8%AE%A1%E5%88%92/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>2024-09 —— 2025</p></blockquote><ol><li>软考中级-信息安全工程师</li><li>Maldev Academy 学习</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>24 年国庆流水</title>
-      <link href="/blog/2024/09/26/24%20%E5%B9%B4%E5%9B%BD%E5%BA%86/"/>
-      <url>/blog/2024/09/26/24%20%E5%B9%B4%E5%9B%BD%E5%BA%86/</url>
-      
-        <content type="html"><![CDATA[<p>国庆七天玩的还行，台球打的多一点，对比之前准头有了很大的提升。进了很多库边球，当然依然还是最爱中袋。学习了一下基本的击球走位，感觉还是很难掌控。</p><p>今天的王者巨猛，看了 B 站的对抗路梯度排行，用了 T1 的孙策，只能说没有对手。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>国庆前的周六</title>
-      <link href="/blog/2024/09/26/%E5%9B%BD%E5%BA%86%E5%89%8D%E7%9A%84%E5%91%A8%E5%85%AD/"/>
-      <url>/blog/2024/09/26/%E5%9B%BD%E5%BA%86%E5%89%8D%E7%9A%84%E5%91%A8%E5%85%AD/</url>
-      
-        <content type="html"><![CDATA[<p>今天真的很热，但是我还要起来玩几把炉石传说，炉石真的太好玩了呜呜呜</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> httpx</span><br><span class="line"></span><br><span class="line">client = httpx.Client()</span><br><span class="line">urls = [<span class="string">f&#x27;https://movie.douban.com/top250?start=<span class="subst">&#123;<span class="number">25</span> * i&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line">urls = [<span class="string">&#x27;https://movie.douban.com/top250?start=0&#x27;</span>]</span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;en-US,en;q=0.9&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate, br&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">top = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> urls:</span><br><span class="line">    res = client.get(i, headers=headers)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;[+] Downloading&#x27;</span>, i, res.status_code)</span><br><span class="line">    res.encoding = <span class="string">&#x27;utf-8&#x27;</span></span><br><span class="line">    <span class="built_in">print</span>(res.text)</span><br><span class="line">    name = re.findall(<span class="string">r&#x27;class=&quot;&quot;&gt;\n&lt;span class=&quot;title&quot;&gt;(.*?)&lt;/span&gt;&#x27;</span>, res.text)</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> name:</span><br><span class="line">        top.append(n)</span><br><span class="line"></span><br><span class="line">client.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(top):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;[<span class="subst">&#123;<span class="string">&quot;.3d&quot;</span> % i&#125;</span>]&#x27;</span>, v)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>2024-09 —— 2025</p></blockquote><ol><li>软考中级-信息安全工程师（有点想摆了）</li><li>Maldev Academy 学习</li><li>LPI-Learning-Material 教材学习</li></ol>]]></content>
       
       
       

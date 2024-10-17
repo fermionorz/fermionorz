@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="一个简约的 Blog 小站 ~">
+    <meta name="description" content="2025 年 01 月 - 2025 年 03月  LPI-Learning-Material 教材学习  2024 年 10 月 - 12 月  软考中级-信息安全工程师（有点想摆了）  Maldev Academy 学习">
 <meta property="og:type" content="website">
-<meta property="og:title" content="一语成谶">
-<meta property="og:url" content="http://fermionorz.github.io/blog/search/index.html">
+<meta property="og:title" content="计划任务">
+<meta property="og:url" content="http://fermionorz.github.io/blog/tasks/index.html">
 <meta property="og:site_name" content="一语成谶">
-<meta property="og:description" content="一个简约的 Blog 小站 ~">
+<meta property="og:description" content="2025 年 01 月 - 2025 年 03月  LPI-Learning-Material 教材学习  2024 年 10 月 - 12 月  软考中级-信息安全工程师（有点想摆了）  Maldev Academy 学习">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-17T00:38:47.635Z">
 <meta property="article:modified_time" content="2024-10-17T00:38:47.635Z">
@@ -36,7 +36,7 @@
       
     
     <!-- title -->
-    <title>一语成谶</title>
+    <title>计划任务</title>
     <!-- async scripts -->
     <!-- Google Analytics -->
 
@@ -108,15 +108,15 @@
 
   <div class="content" itemprop="articleBody">
       
-        <section id="search">
-  <form>
-    <input type="text" class="search-input" id="search-input" placeholder="搜索...">
-  </form>
-  <div id="search-result"></div>
-  <p class="search-no-result">抱歉，没有符合您搜索条件的结果。请换其它关键词再试。</p>
-</section>
+          <h2 id="2025-年-01-月-2025-年-03月"><a href="#2025-年-01-月-2025-年-03月" class="headerlink" title="2025 年 01 月 - 2025 年 03月"></a>2025 年 01 月 - 2025 年 03月</h2><ul>
+<li><input disabled="" type="checkbox"> LPI-Learning-Material 教材学习</li>
+</ul>
+<h2 id="2024-年-10-月-12-月"><a href="#2024-年-10-月-12-月" class="headerlink" title="2024 年 10 月 - 12 月"></a>2024 年 10 月 - 12 月</h2><ul>
+<li><input disabled="" type="checkbox"> 软考中级-信息安全工程师（有点想摆了）</li>
+<li><input disabled="" type="checkbox"> Maldev Academy 学习</li>
+</ul>
 
-      
+        
   </div>
 </article>
 
@@ -174,45 +174,6 @@
 <script src="/blog/js/main.js"></script>
 
 <!-- search -->
-
-  
-<script src="/blog/js/search.js"></script>
-
-  <script type="text/javascript">
-  $(function() {
-
-    var $inputArea = $("input#search-input");
-    var $resultArea = document.querySelector("div#search-result");
-
-    $inputArea.focus(function() {
-      var search_path = "search.xml";
-      if (search_path.length == 0) {
-        search_path = "search.xml";
-      }
-      var path = "/blog/" + search_path;
-      searchFunc(path, 'search-input', 'search-result');
-    });
-
-    $inputArea.keydown(function(e) {
-      if (e.which == 13) {
-        e.preventDefault();
-      }
-    });
-
-    var observer = new MutationObserver(function(mutationsList, observer) {
-      if (mutationsList.length == 1) {
-        if (mutationsList[0].addedNodes.length) {
-          $(".search-no-result").hide();
-        } else if (mutationsList[0].removedNodes.length) {
-          $(".search-no-result").show(200);
-        }
-      }
-    });
-
-    observer.observe($resultArea, { childList: true });
-
-  });
-  </script>
 
 <!-- Baidu Analytics -->
 
