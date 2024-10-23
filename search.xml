@@ -4,24 +4,11 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2024/10/23/Linux%20%E5%B9%B3%E5%8F%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%9C%80%E4%BD%B3%E9%80%89%E6%8B%A9/"/>
-      <url>/2024/10/23/Linux%20%E5%B9%B3%E5%8F%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%9C%80%E4%BD%B3%E9%80%89%E6%8B%A9/</url>
+      <title>Linux 软件选择</title>
+      <link href="/2024/10/23/Linux%20%E8%BD%AF%E4%BB%B6%E9%80%89%E6%8B%A9/"/>
+      <url>/2024/10/23/Linux%20%E8%BD%AF%E4%BB%B6%E9%80%89%E6%8B%A9/</url>
       
         <content type="html"><![CDATA[<table><thead><tr><th>软件类别</th><th>可选软件</th></tr></thead><tbody><tr><td>办公软件</td><td>Steam、WPS、LibreOffice</td></tr><tr><td>文本编辑器</td><td>VScode、Sublime Text</td></tr><tr><td></td><td></td></tr><tr><td>媒体播放</td><td>VLC、smplayer、Audacious、Banshee、Amarok</td></tr><tr><td>媒体编辑</td><td>Blender、GIMP、Inkscape、Audacity、ImageMagick</td></tr><tr><td>Web 浏览器</td><td>Chrome、Firefox、minbrowser</td></tr><tr><td>Web 服务器</td><td>Nginx、Apache、Lighttpd</td></tr><tr><td>数据库</td><td>PostgreSQL、MariaDB</td></tr><tr><td>数据共享</td><td>NextCloud、NFS、Samba</td></tr><tr><td>编程语言</td><td>Rust、C、Golang、Java</td></tr><tr><td>脚本语言</td><td>Bash Shell、Python、Perl</td></tr><tr><td>桌面环境</td><td>Sway、Gnome、KDE、</td></tr><tr><td>终端模拟器</td><td></td></tr><tr><td>虚拟机平台</td><td>VirtualBox、QEMU、KVM、VMware</td></tr><tr><td>安全软件</td><td>VeraCrypt、Bitwarden、</td></tr></tbody></table>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/10/23/SSH%20sgid%20%E6%8F%90%E6%9D%83/"/>
-      <url>/2024/10/23/SSH%20sgid%20%E6%8F%90%E6%9D%83/</url>
-      
-        <content type="html"><![CDATA[<p>ssh 有了 sgid 权限，可以使用对应组可以访问的所有私钥</p>]]></content>
       
       
       
